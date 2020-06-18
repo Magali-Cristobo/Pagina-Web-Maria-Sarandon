@@ -1,6 +1,3 @@
-.parallax{
-    
-}
 .body{
     margin: 0;
     background-image: url("Fondo.jpg");
@@ -11,14 +8,53 @@
     background-size: cover;
     border: none;
 }
-
+.nav{
+    background-color: white;
+    opacity: 10px;
+    height: 100px;
+}
+.titulo{
+    font-size: 30px;
+}
 .frase{
-    height:150px;
+    opacity: 0.9;
+    height:200px;
     background-color:white;
-    font-size:30px; 
-    margin-top: 600px;
+    margin-top: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
-    width: 1500px; 
+    width: 100%; 
+}
+.frase p{
+    opacity: 1;
+    font-size:20px;
+    margin-top: 65px;
+    margin-left: 20%;
+    margin-right: 20%; 
+    float: left;
+
+
+}
+.frase2{
+    float: left;
+    height:125px;
+    background-color:white;
+    margin-top: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 97%; 
+}
+.frase2 b{
+    opacity: 1;
+    font-size:20px;
+    margin-top: 55px;
+    margin-left: 50px;
+    margin-right: 50px;
+    float: right; 
+
+}
+.nav li{
+    display: inline-block;
 }
