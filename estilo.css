@@ -9,6 +9,7 @@
     border: none;
 }
 .nav{
+    z-index: 3;/*para que quede por arriba de la frase*/
     background-color: white;
     opacity: 10px;
     height: 100px;
@@ -17,24 +18,24 @@
     font-size: 30px;
 }
 .frase{
+    z-index: 1;
     opacity: 0.9;
     height:200px;
     background-color:white;
-    margin-top: 500px;
+    margin-top: 510px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
     width: 100%; 
 }
 .frase p{
+    font-family: "Nimbus Sans TW01Con";
+    font-size:24px;
     opacity: 1;
-    font-size:20px;
     margin-top: 65px;
     margin-left: 20%;
     margin-right: 20%; 
     float: left;
-
-
 }
 .frase2{
     float: left;
@@ -46,15 +47,58 @@
     margin-bottom: auto;
     width: 97%; 
 }
-.frase2 b{
+.frase2 a{
+    color:black;
+    text-decoration: none;
+    font-family: "Nimbus Sans TW01Con";
     opacity: 1;
-    font-size:20px;
+    font-size:22px;
     margin-top: 55px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 200px;
     float: right; 
-
 }
+.nav {
+    top: 0;
+    position: fixed;
+    opacity: 0.9;
+    height: 18%;
+    background-color: white;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+ 
 .nav li{
-    display: inline-block;
+    margin: 4em auto auto !important;
+    width: 8%;
+    margin-right: 2%;
+    float: left;
+    font-size: 18px;
+    font-family: "Nimbus Sans TW01Con";
+    text-decoration: none;
+    align-items: center;
+ }
+.nav a{
+    text-decoration: none;
+    color:black;
 }
+.nav div{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nav a b{
+    float: left;
+    margin: 1.5em 2.5em 2em 20% !important; 
+    font-family: "Nimbus Sans TW01Con";
+    font-size: 42px;
+    
+}
+#logoInsta{
+    margin: 0 auto;
+}
+@font-face {
+    font-family: "Nimbus Sans TW01Con";
+    src: url("Nimbus Sans TW01Con.ttf") format("woff2"); /* chrome、firefox */
+  }
