@@ -14,9 +14,18 @@
             <li  class="items">
                 <a href="#">Pinturas</a>
                 <ul class="subItems">
-                    <li><a href="pinturas.php?numeroSerie=1">Serie Árboles</a></li>
-                    <li><a href="pinturas.php?numeroSerie=2">Serie Bosques</a></li>
-                    <li><a href="pinturas.php?numeroSerie=3">Serie Flores</a></li>
+                <?php 
+                    $i=0;
+                    $conexion=mysqli_connect("localhost","root","","mariasarandondb");
+                    $consulta= "SELECT nombreSerie from serie";
+                    $datos= mysqli_query ($conexion,$consulta);
+                    while($fila =mysqli_fetch_array($datos)){
+                        $i++;
+                        $nombreSerie=$fila['nombreSerie'];
+                        echo '<li><a href="pinturas.php?numeroSerie='.$i.'">'.$nombreSerie.'</a></li>';
+
+                    }
+                ?> 
                 </ul>
             </li>
             <li  class="items"><a href="workInProgress.html">Work in Progress</a></li>

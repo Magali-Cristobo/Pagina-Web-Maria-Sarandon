@@ -14,25 +14,38 @@
             <li  class="items">
                 <a href="#">Pinturas</a>
                 <ul class="subItems">
-                    <li><a href="pinturas.php?numeroSerie=1">Serie Árboles</a></li>
-                    <li><a href="pinturas.php?numeroSerie=2">Serie Bosques</a></li>
-                    <li><a href="pinturas.php?numeroSerie=3">Serie Flores</a></li>
-                </ul>
+                <?php 
+                    $i=0;
+                    $conexion=mysqli_connect("localhost","root","","mariasarandondb");
+                    $consulta= "SELECT nombreSerie from serie";
+                    $datos= mysqli_query ($conexion,$consulta);
+                    while($fila =mysqli_fetch_array($datos)){
+                        $i++;
+                        $nombreSerie=$fila['nombreSerie'];
+                        echo '<li><a href="pinturas.php?numeroSerie='.$i.'">'.$nombreSerie.'</a></li>';
+
+                    }
+                ?>
+                </ul> 
             </li>
             <li  class="items"><a href="workInProgress.html">Work in Progress</a></li>
             <li  class="items"><a href="cv.html">CV</a></li>
             <li  class="items"><a href="tallerYClases.html">Taller / Clases</a></li>
             <li  class="items"><a href="about.asp">Contacto</a></li>
 
-        </ul>
-        <div class="frase">
-            <p>Mi obra pictórica, es un homenaje contemporáneo al grabado botánico antiguo, que le suma tamaño, y se adapta al soporte de la tela con colores vivos y planos, jerarquizando aquellos dibujos minuciosos y de estudio.
-            </br> <i>María Sarandon</i></p>
-        </div>
-        <div class="frase2">
-            <a class="auto-generated-link" data-auto-recognition="true" data-content="mariasarandon@hotmail.com" 
-            href="mailto:mariasarandon@hotmail.com" data-type="mail"><b>mariasarandon@hotmail.com</b></a>
-        </div>
-    </body>
+        <?php
 
+            $conexion=mysqli_connect("localhost","root", "","mariasarandondb");
+            $numeroSerie=$_GET["numeroSerie"];
+            $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie='.$numeroSerie.'";
+            $datos=mysqli_query($conexion,$consulta);
+            while($fila=mysqli_fetch_array($datos)){
+                $imagen=$fila["nombreArchivo"];
+                echo '<img src="'.$imagen.'">';
+
+            }
+    
+        ?>
+        </ul>
+    </body>
 </html>
