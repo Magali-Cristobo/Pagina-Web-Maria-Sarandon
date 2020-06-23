@@ -3,6 +3,7 @@
         <title>Home | Maria</title>
         <link rel="icon" type="" href="Imagenes/iconoPag.png">
         <link type="text/css" rel="stylesheet" href="estilo.css">
+        <meta charset="UTF-8">
     </head>
 
     <body class="body">
@@ -22,7 +23,7 @@
                     while($fila =mysqli_fetch_array($datos)){
                         $i++;
                         $nombreSerie=$fila['nombreSerie'];
-                        echo '<li><a href="pinturas.php?numeroSerie='.$i.'">'.$nombreSerie.'</a></li>';
+                        echo '<li><a href="pinturas.php?numeroSerie='.$i.'">Serie '.$nombreSerie.'</a></li>';
 
                     }
                 ?> 

@@ -3,6 +3,7 @@
         <title>Home | Maria</title>
         <link rel="icon" type="" href="Imagenes/iconoPag.png">
         <link type="text/css" rel="stylesheet" href="estilo.css">
+        <meta charset="UTF-8">
     </head>
 
     <body class="body">
@@ -18,34 +19,39 @@
                     $i=0;
                     $conexion=mysqli_connect("localhost","root","","mariasarandondb");
                     $consulta= "SELECT nombreSerie from serie";
-                    $datos= mysqli_query ($conexion,$consulta);
+                    $datos=mysqli_query($conexion,$consulta);
                     while($fila =mysqli_fetch_array($datos)){
                         $i++;
                         $nombreSerie=$fila['nombreSerie'];
-                        echo '<li><a href="pinturas.php?numeroSerie='.$i.'">'.$nombreSerie.'</a></li>';
+                        echo '<li><a href="pinturas.php?numeroSerie='.$i.'">Serie '.$nombreSerie.'</a></li>';
 
                     }
-                ?>
+                ?> 
                 </ul> 
             </li>
             <li  class="items"><a href="workInProgress.html">Work in Progress</a></li>
             <li  class="items"><a href="cv.html">CV</a></li>
             <li  class="items"><a href="tallerYClases.html">Taller / Clases</a></li>
             <li  class="items"><a href="about.asp">Contacto</a></li>
-
-        <?php
-
-            $conexion=mysqli_connect("localhost","root", "","mariasarandondb");
-            $numeroSerie=$_GET["numeroSerie"];
-            $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie='.$numeroSerie.'";
-            $datos=mysqli_query($conexion,$consulta);
-            while($fila=mysqli_fetch_array($datos)){
-                $imagen=$fila["nombreArchivo"];
-                echo '<img src="'.$imagen.'">';
-
-            }
-    
-        ?>
         </ul>
+        <div class="slider">
+            <?php
+
+                $conexion=mysqli_connect("localhost","root", "","mariasarandondb");
+                $numeroSerie=$_GET["numeroSerie"];
+                $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie='.$numeroSerie.'";
+                $datos=mysqli_query($conexion,$consulta);
+                while($fila=mysqli_fetch_array($datos)){
+                    $imagen=$fila["nombreArchivo"];
+                    echo '<img src="'.$imagen.'">';
+
+                }
+
+            ?>
+        </div>
+        <div>
+
+        </div>
+    
     </body>
 </html>
