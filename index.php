@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
     </head>
 
-    <body class="body">
+    <body class="bodyIndex">
         <ul class="nav">
             <img id="logoInsta" alt="Instagram - Black Circle" data-type="image" 
             itemprop="image" src="https://static.wixstatic.com/media/e1aa082f7c0747168d9cf43e77046142.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01/e1aa082f7c0747168d9cf43e77046142.webp" 
