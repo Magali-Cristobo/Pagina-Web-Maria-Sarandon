@@ -171,7 +171,9 @@
     z-index: 15;
 }
 .pintura{
-    display: inline-block;
+    margin-right: 20px;
+    display: block;
+    float: left;
     width: 300px;
 }
 .descripcion{
@@ -184,7 +186,7 @@
     font-family: "Nimbus Sans TW01Con";
     font-size: 22px;
 }
-#cuadro{
+.cuadro{
     text-align: center;
     background-color: white;
     width: 300px; 
@@ -192,12 +194,17 @@
     border-radius: 5%;
 }
 
-.pintura:hover  #cuadro{
+.pintura:hover  .cuadro{
     transition-property: height;
     transition-duration: 1s;
     height: 450px;
 }
 .pintura:hover  .descripcion{
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
     display: block;
 }
 .row {
@@ -242,3 +249,47 @@
       max-width: 100%;
     }
   }
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }}
