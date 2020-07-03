@@ -174,8 +174,8 @@
     margin-right: 20px;
     display: block;
     float: left;
-    width: 300px;
-}
+    margin-bottom:8% ;
+  }
 .descripcion{
     font-size: 19px;
     display: none;
@@ -293,3 +293,8 @@
     100% {
       opacity:1;
     }}
+    @media (max-width: 600px) {
+      .fila{
+        height: 80%;
+      }
+  }
