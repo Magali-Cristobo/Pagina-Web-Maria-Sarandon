@@ -47,7 +47,7 @@
                     </div> 
                 </li>
                 <li class="nav-item item">
-                    <a class="nav-link" href="//codeply.com">Work in Progress</a>
+                    <a class="nav-link" href="#">Work in Progress</a>
                 </li>
                 <li class="nav-item item">
                     <a class="nav-link" href="#">CV</a>
@@ -81,11 +81,11 @@
                         <div class='col-lg-1 borrar'></div>
                         <div class='pintura col-lg-2'>
                             <div class='imagen'>
-                                <img src='.$imagen.'>
+                                <img src='$imagen'>
                             </div>
                             <div class='cuadro'>
-                                <label class='titulo'>'.$titulo.'</label>
-                                <label class='descripcion'>'.$descripcion.'</label>
+                                <label class='titulo'>$titulo</label>
+                                <label class='descripcion'>$descripcion</label>
                             </div>
                         </div>";
                         $numeroImagen++;
@@ -95,11 +95,11 @@
                         $numeroImagen=1;
                         echo "<div class='col-lg-4 borrar'></div>
                         <div class='pintura col-lg-2'><div class='imagen'>
-                        <img src=.$imagen.'>
+                        <img src='$imagen'>
                         </div>
                         <div class='cuadro'>
-                            <label class='titulo'>'.$titulo.'</label>
-                            <label class='descripcion'>'.$descripcion.'</label>
+                            <label class='titulo'>$titulo</label>
+                            <label class='descripcion'>$descripcion</label>
                         </div>
                         </div>
                         </div>";

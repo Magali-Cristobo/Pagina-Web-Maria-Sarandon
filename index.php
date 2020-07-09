@@ -47,7 +47,7 @@
                     </div> 
                 </li>
                 <li class="nav-item item">
-                    <a class="nav-link" href="//codeply.com">Work in Progress</a>
+                    <a class="nav-link" href="#">Work in Progress</a>
                 </li>
                 <li class="nav-item item">
                     <a class="nav-link" href="#">CV</a>
