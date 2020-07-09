@@ -23,7 +23,7 @@
 </head>
 
     <body style="background-color:#7A7ACC; margin-bottom: 2%;margin: 0;">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: relative;">
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,7 +46,7 @@
                     <a class="nav-link" href="#">CV</a>
                 </li>
                 <li class="nav-item item">
-                    <a class="nav-link" href="#">Talleres / clases</a>
+                    <a class="nav-link" href="#">Taller / clases</a>
                 </li>
                 <li class="nav-item item">
                   <a class="nav-link" href="#">Contacto</a>
@@ -56,10 +56,9 @@
         
     </nav>
         <div class="container contenedor">
-            <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 25px;">Ensayos Orgánicos</p>
-            <div class="row fila">
-                <div class="col-lg-1"></div>
-
+            <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 25px;margin-top: 5%; margin-bottom: 5%;">Ensayos Orgánicos</p>
+            <div class="row">
+                <div class="col-lg-1 borrar"></div>
                 <div class="pintura col-lg-2">
                     <div class="imagen">
                         <img src="Imagenes/Serie Arboles 2015-2018/Abrazo 130x140.jpg">
@@ -69,7 +68,7 @@
                         <label class="descripcion">Acrílico sobre tela 130x140</label>
                     </div>
                 </div>
-                <div class="col-lg-4"></div>
+                <div class="col-lg-4 borrar"></div>
                 <div class="pintura col-lg-2">
                     <div class="imagen">
                         <img src="Imagenes/Serie Arboles 2015-2018/Baobab 185x140.jpg">
@@ -89,6 +88,12 @@
             else{
               $(".navbar"). addClass("barraExpandida");
             }
+          }
+          if ($(window).width() < 770) {
+            $(".borrar").remove();
+            $(".borrar").remove();
+            $(".pintura").removeClass("col-lg-2");
+            $(".pintura").addClass('pinturaCelular');
           }
           $("#boton").click(agrandarBarra);
         </script>
