@@ -30,9 +30,9 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
               <a class="navbar-brand mx-auto tituloNav" href="#">Maria Sarandon</a>
-                <li class="nav-item dropdown item"href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <a class="nav-link dropdown-toggle" href="#">Pinturas</a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle menuDesplegable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pinturas</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <?php 
                             $i=0;
                             $conexion=mysqli_connect("localhost","root","","mariasarandondb");
@@ -41,7 +41,7 @@
                             while($fila =mysqli_fetch_array($datos)){
                                 $i++;
                                 $nombreSerie=$fila['nombreSerie'];
-                                echo '<a class="dropdown-item" href="pinturas.php?numeroSerie='.$i.'">Serie '.$nombreSerie.'</a>';
+                                echo '<a data-target="pinturas.php?numeroSerie='.$i.'" class="dropdown-item" href="pinturas.php?numeroSerie='.$i.'">Serie '.$nombreSerie.'</a>';
                             }
                         ?> 
                     </div> 
@@ -112,6 +112,9 @@
             ?>
             </div>
     <script>
+        $('#menu-main > li > .dropdown-toggle').click(function () {
+            window.location = $(this).attr('href');
+        });
           function agrandarBarra(){
             if($(".navBar").hasClass("barraExpandida")){
               $(".navBar").removeClass("barraExpandida")
