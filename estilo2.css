@@ -49,11 +49,11 @@
   float: right; 
 }
  .navBar{
-   width: 100%;
+  width: 100%;
   position:fixed; 
   top:0;
   z-index: 3;/*para que quede por arriba de la frase*/
-     height:20%;
+  height:20%;
  }
  .navBar ul{
   width:80%;

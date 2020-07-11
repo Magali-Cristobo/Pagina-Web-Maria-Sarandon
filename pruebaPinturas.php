@@ -23,7 +23,7 @@
     </head>
 
     <body class="body" style="background-color:#7A7ACC; margin-bottom: 2%;margin: 0; ">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navBar" style="position:absolute;">
+        <<nav class="navbar navbar-expand-lg navbar-light bg-light navBar">
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -64,54 +64,29 @@
     </nav>
     <div class="container contenedor">
     <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 25px;margin-top: 5%; margin-bottom: 5%;">Ensayos Orgánicos</p>
-            <?php
-
-                $conexion=mysqli_connect("localhost","root", "","mariasarandondb");
-                $numeroSerie=$_GET["numeroSerie"];
-                $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie='.$numeroSerie.'";
-                $datos=mysqli_query($conexion,$consulta);
-                $cantImagenes=0;
-                $numeroImagen=1;
-                while($fila=mysqli_fetch_array($datos)){
-                    $imagen=$fila["nombreArchivo"];
-                    $titulo=$fila["nombre"];
-                    $descripcion=$fila["descripcion"];
-                    if($numeroImagen==1){
-                        echo "<div class='row'>
-                        <div class='col-lg-1 borrar'></div>
-                        <div class='pintura col-lg-2'>
-                            <div class='imagen'>
-                                <img src='$imagen'>
-                            </div>
-                            <div class='cuadro'>
-                                <label class='titulo'>$titulo</label>
-                                <label class='descripcion'>$descripcion</label>
-                            </div>
-                        </div>";
-                        $numeroImagen++;
-                        $cantImagenes++;
-                    }
-                    else if($numeroImagen==2){
-                        $numeroImagen=1;
-                        echo "<div class='col-lg-4 borrar'></div>
-                        <div class='pintura col-lg-2'><div class='imagen'>
-                        <img src='$imagen'>
-                        </div>
-                        <div class='cuadro'>
-                            <label class='titulo'>$titulo</label>
-                            <label class='descripcion'>$descripcion</label>
-                        </div>
-                        </div>
-                        </div>
-                        </div>";
-                        $cantImagenes++;
-                    }
-                }
-                if($cantImagenes%2!=0){
-                    echo"</div>";
-                }
-            ?>
-            </div>
+          <div class='row'>
+                <div class='col-lg-1 borrar'></div>
+                <div class='pintura col-lg-2'>
+                    <div class='imagen'>
+                        <img src='Imagenes/SerieArboles2015-2018/Baobab185x140.jpg'>
+                    </div>
+                    <div class='cuadro'>
+                        <label class='titulo'>$titulo</label>
+                        <label class='descripcion'>$descripcion</label>
+                    </div>
+                </div>
+                <div class='col-lg-4 borrar'></div>
+                <div class='pintura col-lg-2'>
+                    <div class='imagen'>
+                        <img src='Imagenes/SerieArboles2015-2018/Baobab185x140.jpg'>
+                    </div>
+                <div class='cuadro'>
+                    <label class='titulo'>$titulo</label>
+                    <label class='descripcion'>$descripcion</label>
+                </div>
+                </div>
+                </div>   
+        </div>
     <script>
         $('#menu-main > li > .dropdown-toggle').click(function () {
             window.location = $(this).attr('href');
