@@ -68,7 +68,7 @@
 
                 $conexion=mysqli_connect("localhost","root", "","mariasarandondb");
                 $numeroSerie=$_GET["numeroSerie"];
-                $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie='.$numeroSerie.'";
+                $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
                 $datos=mysqli_query($conexion,$consulta);
                 $cantImagenes=0;
                 $numeroImagen=1;
