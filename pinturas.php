@@ -23,7 +23,7 @@
     </head>
 
     <body class="body" style="background-color:#7A7ACC; margin-bottom: 2%;margin: 0; ">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navBar" style="position:absolute;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navBar">
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -100,7 +100,6 @@
                         <div class='cuadro'>
                             <label class='titulo'>$titulo</label>
                             <label class='descripcion'>$descripcion</label>
-                        </div>
                         </div>
                         </div>
                         </div>";
