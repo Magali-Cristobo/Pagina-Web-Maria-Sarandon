@@ -50,7 +50,7 @@
 }
  .navBar{
   width: 100%;
-  position:fixed; 
+  position:relative; 
   top:0;
   z-index: 3;/*para que quede por arriba de la frase*/
   height:20%;
