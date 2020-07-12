@@ -1,3 +1,11 @@
+<?php
+    $numeroSerie=$_GET["numeroSerie"];
+    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
+        "Error: No es posible establecer la conexión"
+        );
+    $queryFondo=mysqli_query($conexion, "SELECT colorFondo FROM serie where idSerie=$numeroSerie");
+    $rowFondo=mysqli_fetch_row($queryFondo);
+?>
 <html>
     <head>
         <title>Pinturas</title>
@@ -22,22 +30,19 @@
 <link type="text/css" rel="stylesheet" href="estilo2.css">    
     </head>
 
-    <body class="body" style="background-color:#7A7ACC; margin-bottom: 2%;margin: 0; ">
+    <body class="body" style="background-color:<?php echo $rowFondo[0] ?>; margin-bottom: 2%;margin: 0; ">
         <nav class="navbar navbar-expand-lg navbar-light bg-light navBar" style="position:relative;">
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
-              <a class="navbar-brand mx-auto tituloNav" href="#">Maria Sarandon</a>
+              <a class="navbar-brand mx-auto tituloNav" href="index.php">Maria Sarandon</a>
               <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menuDesplegable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pinturas</a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <?php 
+                        <?php
                             $i=0;
-                            $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
-                                "Error: No es posible establecer la conexión"
-                                );
                             $consulta= "SELECT nombreSerie from serie";
                             $datos= mysqli_query ($conexion,$consulta);
                             while($fila =mysqli_fetch_array($datos)){
@@ -65,13 +70,17 @@
         
     </nav>
     <div class="container contenedor">
-    <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 25px;margin-top: 5%; margin-bottom: 5%;">Ensayos Orgánicos</p>
             <?php
-                $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
+                    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
                     "Error: No es posible establecer la conexión"
                     );
-                    $numeroSerie=$_GET["numeroSerie"];
                     $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
+                    //$nombreSerieConsulta=mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
+                    $result = mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
+                    $row = mysqli_fetch_row($result);
+            ?>
+        <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 40px;margin-top: 2%; margin-bottom: 2%; color: white"><?php echo $row[0] ?></p>
+            <?php
                     $datos=mysqli_query($conexion,$consulta);
                     $cantImagenes=0;
                     $numeroImagen=1;
