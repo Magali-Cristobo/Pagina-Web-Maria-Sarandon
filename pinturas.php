@@ -82,6 +82,7 @@
                         if($numeroImagen==1){
                             echo "<div class='row'>
                             <div class='col-lg-1 borrar'></div>
+                            <div class='contenedorIndividual'>
                             <div class='pintura col-lg-2'>
                                 <div class='imagen'>
                                     <img src='$imagen'>
@@ -90,6 +91,7 @@
                                     <label class='titulo'>$titulo</label>
                                     <label class='descripcion'>$descripcion</label>
                                 </div>
+                            </div>
                             </div>";
                             $numeroImagen++;
                             $cantImagenes++;
@@ -97,12 +99,14 @@
                         else if($numeroImagen==2){
                             $numeroImagen=1;
                             echo "<div class='col-lg-4 borrar'></div>
+                            <div class='contenedorIndividual'>
                             <div class='pintura col-lg-2'><div class='imagen'>
                             <img src='$imagen'>
                             </div>
                             <div class='cuadro'>
                                 <label class='titulo'>$titulo</label>
                                 <label class='descripcion'>$descripcion</label>
+                            </div>
                             </div>
                             </div>
                             </div>";

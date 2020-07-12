@@ -50,7 +50,7 @@
 }
  .navBar{
   width: 100%;
-  position:relative; 
+  position:fixed; 
   top:0;
   z-index: 3;/*para que quede por arriba de la frase*/
   height:20%;
@@ -67,7 +67,7 @@
     float: left;
     width: auto;
     height: auto;
-
+    z-index: 2;
   }
 .imagen img{
     width: 300px;
@@ -80,10 +80,8 @@
     margin-right: 20px;
     display: block;
     float: left;
-    margin-bottom:15% ;
-    
-
   }
+
 .descripcion{
     font-size: 19px;
     display: none;
@@ -115,12 +113,11 @@
     -ms-animation: fadeIn ease 3s;
     display: block;
 }
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
-  
+.contenedorIndividual{
+  height: 450px;
+  width: 300px;
+  margin-bottom: 10%;
+}
   .column {
     flex: 25%;
     max-width: 25%;
@@ -252,7 +249,7 @@
       -ms-animation: fadeIn ease 0s;
       display: block;
   }
-  
+}
   .tituloNav{
     font-family: "bdp";
     font-size: 30px;
@@ -264,4 +261,7 @@
   }
 .menuDesplegable{
   margin-right: 2%;
+}
+.borrar{
+  z-index: 0;
 }
