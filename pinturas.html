@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Home | Maria</title>
+        <script src="jquery-3.4.1.min.js"></script>
         <link rel="icon" type="" href="Imagenes/iconoPag.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -16,9 +17,9 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
 <!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js%22%3E</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script><link type="text/css" rel="stylesheet" href="estilo2.css">
 <link type="text/css" rel="stylesheet" href="estilo2.css">    
 </head>
 
@@ -27,9 +28,11 @@
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="navbar-brand mx-auto tituloNav" style="display: block;" href="#">Maria Sarandon</a>
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
-              <a class="navbar-brand mx-auto tituloNav" href="#">Maria Sarandon</a>
+              <a class="navbar-brand mx-auto tituloNav titulo1" style="display: block;" href="#">Maria Sarandon</a>
                 <li class="nav-item dropdown item"href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <a class="nav-link dropdown-toggle" href="#">Pinturas</a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -55,12 +58,12 @@
           </div>
         
     </nav>
-        <div class="container contenedor">
+        <div class="contenedor">
             <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 25px;margin-top: 5%; margin-bottom: 5%;">Ensayos Orgánicos</p>
             <div class="row">
-              <div class='col-lg-1 borrar'></div>
+              <div class="col-sm-1"></div>
               <div class="contenedorIndividual">
-                <div class="pintura col-lg-2">
+                <div class="pintura ">
                   <div class="imagen">
                       <img src="Imagenes/SerieArboles2015-2018/abrazo130x140.jpg">
                   </div>
@@ -70,9 +73,9 @@
                   </div>
                 </div>
               </div>
-                <div class='col-lg-4 borrar'></div>
+              <div class="col-sm-1"></div>
                 <div class="contenedorIndividual">
-                  <div class='pintura col-lg-2'>
+                  <div class='pintura '>
                     <div class='imagen'>
                       <img src='Imagenes/SerieArboles2015-2018/Baobab185x140.jpg'>
                     </div>
@@ -82,11 +85,9 @@
                     </div>
                   </div>
                 </div>
-            </div>
-            <div class="row">
-            <div class='col-lg-1 borrar'></div>
+                <div class="col-sm-1"></div>
               <div class="contenedorIndividual">
-                <div class="pintura col-lg-2">
+                <div class="pintura ">
                   <div class="imagen">
                       <img src="Imagenes/SerieArboles2015-2018/abrazo130x140.jpg">
                   </div>
@@ -96,9 +97,11 @@
                   </div>
                 </div>
               </div> 
-              <div class='col-lg-4 borrar'></div>
+            </div>
+              <div class="row">
+                <div class="col-sm-1"></div>
                 <div class="contenedorIndividual">
-                  <div class='pintura col-lg-2'>
+                  <div class='pintura'>
                     <div class='imagen'>
                       <img src='Imagenes/SerieArboles2015-2018/Baobab185x140.jpg'>
                     </div>
@@ -108,13 +111,14 @@
                     </div>
                   </div>
                 </div>
-            </div>
-            </div>  
-        </div>
+          </div>
+        
+          </div>  
         <script>
+         
           function agrandarBarra(){
             if($(".navBar").hasClass("barraExpandida")){
-              $(".navBar").removeClass("barraExpandida")
+              $(".navBar").removeClass("barraExpandida");
             }
             else{
               $(".navbar"). addClass("barraExpandida");
@@ -125,6 +129,7 @@
             $(".borrar").remove();
             $(".pintura").removeClass("col-lg-2");
             $(".pintura").addClass('pinturaCelular');
+            $(".titulo1").remove();
           }
           $("#boton").click(agrandarBarra);
         </script>

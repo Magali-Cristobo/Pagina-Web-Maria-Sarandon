@@ -27,15 +27,17 @@
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="navbar-brand mx-auto tituloNav titulo2" style="display: block;" href="#">Maria Sarandon</a>
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
-              <a class="navbar-brand mx-auto tituloNav" href="#">Maria Sarandon</a>
+              <a class="navbar-brand mx-auto tituloNav titulo1" href="#">Maria Sarandon</a>
                 <li class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pinturas</a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <?php 
                             $i=0;
-                            $conexion=mysqli_connect("localhost","root","6874","mariasarandondb");
+                            $conexion=mysqli_connect("localhost","root","","mariasarandondb");
                             $consulta= "SELECT nombreSerie from serie";
                             $datos= mysqli_query ($conexion,$consulta);
                             while($fila =mysqli_fetch_array($datos)){
@@ -85,6 +87,10 @@
             $(".borrar").remove();
             $(".pintura").removeClass("col-lg-2");
             $(".pintura").addClass('pinturaCelular');
+            $(".titulo1").remove();
+          }
+          else{
+            $(".titulo2").remove();
           }
           $("#boton").click(agrandarBarra);
         $('#menu-main > li > .dropdown-toggle').click(function () {

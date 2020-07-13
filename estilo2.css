@@ -70,10 +70,10 @@
     z-index: 2;
   }
 .imagen img{
-    width: 300px;
-    height: 350px;
-    z-index: 15;
-    Object-fit: cover;
+  width: 110%; 
+  height: 100%; 
+  z-index: 15;
+  Object-fit: cover;
 }
 
 .pintura{
@@ -95,29 +95,33 @@
 .cuadro{
   text-align: center;
   background-color: white;
-  width: 300px; 
-  height: 350px; 
+  width: 110%; 
+  height: 100%; 
   border-radius: 5%;
 }
 
 .pintura:hover  .cuadro{
     transition-property: height;
     transition-duration: 1s;
-    height: 450px;
+    height: 112%;
 }
 .pintura:hover  .descripcion{
-    animation: fadeIn ease 3s;
-    -webkit-animation: fadeIn ease 3s;
-    -moz-animation: fadeIn ease 3s;
-    -o-animation: fadeIn ease 3s;
-    -ms-animation: fadeIn ease 3s;
-    display: block;
+  animation-delay: 3s;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+
+    
 }
 .contenedorIndividual{
   height: 450px;
   width: 300px;
   margin-bottom: 10%;
+  margin-left: 2%;
 }
+
   .column {
     flex: 25%;
     max-width: 25%;
