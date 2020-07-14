@@ -38,6 +38,10 @@
   margin-bottom: 10%;
   width: 97%; 
 }
+.space{
+  height: 300px;
+  width: 4%
+}
 .frase2 a{
   color:black;
   text-decoration: none;
@@ -74,6 +78,12 @@
   height: 100%; 
   z-index: 15;
   Object-fit: cover;
+}
+
+.row{
+  width:80%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .pintura{
@@ -119,7 +129,8 @@
   height: 450px;
   width: 300px;
   margin-bottom: 10%;
-  margin-left: 2%;
+  margin-left: 6.6%;
+  margin-right: 5.6%;
 }
 
   .column {
@@ -142,6 +153,130 @@
     -webkit-filter: brightness(40%);
 }
   
+  @media (max-width: 1775px){
+    .contenedorIndividual{
+      margin-left: 6%;
+      margin-right: 5%;
+    }
+    .row{
+      width: 82%;
+      margin-left: 11%;
+      margin-right: 8%
+    }
+  }
+
+  @media (max-width: 1680px){
+    .contenedorIndividual{
+      margin-left: 5%;
+      margin-right: 4%;
+    }
+    .row{
+      margin-left: 9%;
+      margin-right: 8%
+    }
+  }
+
+  @media (max-width: 1540px){
+    .contenedorIndividual{
+      margin-left: 4%;
+      margin-right: 3%;
+    }
+  }
+
+  @media (max-width: 1423px){
+    .row{
+      width: 85%;
+    }
+    .contenedorIndividual{
+      margin-left: 3%;
+      margin-right: 2%;
+    }
+  }
+
+  /*@media (max-width: 1322px) and (min-width: 1292px){
+    .contenedorIndividual:first-child{
+      margin-left: 1%;
+    }
+    .row{
+      margin-left: 9%;
+      margin-right: 7%;
+    }
+  }*/
+
+  @media (max-width: 1292px){
+    .contenedorIndividual{
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+    .row{
+      margin-left: 10%;
+      margin-right: 7%;
+    }
+  }
+
+  @media (max-width: 1130px){
+    .contenedorIndividual{
+      margin-left: 1%;
+      margin-right: 0%;
+    }
+    .row{
+      margin-left: 7%;
+      margin-right: 5%;
+    }
+  }
+
+  @media (max-width: 1090px){
+    .row{
+      margin-left: 14%;
+      margin-right: 10%;
+    }
+    .contenedorIndividual{
+      margin-right: 8px;
+      width:230px;
+      height:336px;
+    }
+  }
+
+  @media (max-width: 1000px){
+    .row{
+      margin-left: 10%;
+    }
+  }
+
+  @media (max-width: 900px){
+    .row{
+      margin-left:6%;
+    }
+  }
+
+  @media (max-width: 864px){
+    .contenedorIndividual{
+      width:180px;
+      height:260px;
+      margin-left:3%;
+      margin-right:1%;
+    }
+    .row{
+      margin-left:100px;
+    }
+    .titulo{
+      font-size: 20px;
+    }
+    .descripcion{
+      font-size: 15px;
+      display: block;
+      margin-top:0px;
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: 780px){
+    .row{
+      margin-left:80px;
+    }
+  }
+
+
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
