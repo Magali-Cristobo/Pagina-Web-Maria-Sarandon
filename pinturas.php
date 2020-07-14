@@ -1,6 +1,6 @@
 <?php
     $numeroSerie=$_GET["numeroSerie"];
-    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
+    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
         "Error: No es posible establecer la conexión"
         );
     $queryFondo=mysqli_query($conexion, "SELECT colorFondo FROM serie where idSerie=$numeroSerie");
@@ -35,9 +35,10 @@
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="navbar-brand mx-auto tituloNav titulo2" style="display: block;" href="#">Maria Sarandon</a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
-              <a class="navbar-brand mx-auto tituloNav" href="index.php">Maria Sarandon</a>
+              <a class="navbar-brand mx-auto tituloNav titulo1" href="index.php">Maria Sarandon</a>
               <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menuDesplegable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pinturas</a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -69,30 +70,28 @@
           </div>
         
     </nav>
-    <div class="container contenedor">
-            <?php
-                    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
-                    "Error: No es posible establecer la conexión"
-                    );
-                    $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
-                    //$nombreSerieConsulta=mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
-                    $result = mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
-                    $row = mysqli_fetch_row($result);
-            ?>
+    <div class="contenedor">
+        <?php
+            $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
+            "Error: No es posible establecer la conexión"
+            );
+            $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
+            //$nombreSerieConsulta=mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
+            $result = mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
+            $row = mysqli_fetch_row($result);
+        ?>
         <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 40px;margin-top: 2%; margin-bottom: 2%; color: white"><?php echo $row[0] ?></p>
             <?php
                     $datos=mysqli_query($conexion,$consulta);
-                    $cantImagenes=0;
                     $numeroImagen=1;
                     while($fila=mysqli_fetch_array($datos)){
                         $imagen=$fila["nombreArchivo"];
                         $titulo=$fila["nombre"];
                         $descripcion=$fila["descripcion"];
                         if($numeroImagen==1){
-                            echo "<div class='row'>
-                            <div class='col-lg-1 borrar'></div>
+                            echo "<div class='row fila'>
                             <div class='contenedorIndividual'>
-                            <div class='pintura col-lg-2'>
+                            <div class='pintura'>
                                 <div class='imagen'>
                                     <img src='$imagen'>
                                 </div>
@@ -103,26 +102,40 @@
                             </div>
                             </div>";
                             $numeroImagen++;
-                            $cantImagenes++;
                         }
                         else if($numeroImagen==2){
-                            $numeroImagen=1;
-                            echo "<div class='col-lg-4 borrar'></div>
+                            $numeroImagen++;
+                            echo "
                             <div class='contenedorIndividual'>
-                            <div class='pintura col-lg-2'><div class='imagen'>
-                            <img src='$imagen'>
-                            </div>
-                            <div class='cuadro'>
-                                <label class='titulo'>$titulo</label>
-                                <label class='descripcion'>$descripcion</label>
-                            </div>
-                            </div>
-                            </div>
+                                <div class='pintura'>
+                                    <div class='imagen'>
+                                        <img src='$imagen'>
+                                    </div>
+                                    <div class='cuadro'>
+                                        <label class='titulo'>$titulo</label>
+                                        <label class='descripcion'>$descripcion</label>
+                                    </div>
+                                </div>
                             </div>";
-                            $cantImagenes++;
+                        }
+                        else{
+                            $numeroImagen=1;
+                            echo "
+                            <div class='contenedorIndividual'>
+                                <div class='pintura'>
+                                    <div class='imagen'>
+                                        <img src='$imagen'>
+                                    </div>
+                                    <div class='cuadro'>
+                                        <label class='titulo'>$titulo</label>
+                                        <label class='descripcion'>$descripcion</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>";
                         }
                     }
-                    if($cantImagenes%2!=0){
+                    if($numeroImagen==1 || $numeroImagen==2){
                         echo"</div>";
                     }
                 ?>
@@ -145,6 +158,13 @@
             $(".pintura").removeClass("col-lg-2");
             $(".pintura").addClass('pinturaCelular');
           }
+          if($(window).width() < 977){
+            $(".titulo1").remove();
+          }
+          else{
+            $(".titulo2").remove();
+          }
+          
           $("#boton").click(agrandarBarra);
         </script>
     
