@@ -1,9 +1,9 @@
 
-*,
+/* *,
 .body::before,
 .body::after {
   box-sizing: content-box; 
-}
+} */
 .bodyIndex{
   margin: 0;
   background-image: url("Fondo.jpg");
@@ -135,150 +135,60 @@
   height: 450px;
   width: 300px;
   margin-bottom: 10%;
-  margin-left: 6.6%;
-  margin-right: 5.6%;
+}
+.contenedor p{
+  font-family: 'Nimbus Sans TW01Con'; 
+  font-size: 40px;
+  margin-top: 2%; 
+  margin-bottom: 2%; 
+  color: white
 }
 
-  @media (max-width: 1775px){
-    .contenedorIndividual{
-      margin-left: 6%;
-      margin-right: 5%;
-    }
-    .fila{
-      width: 82%;
-      margin-left: 11%;
-      margin-right: 8%
-    }
+.fila{
+  width: 1000px;
+  margin: 0 auto;
+}
+.contenedorIndividual:first-child{
+  margin-right: 50px;
+}
+.contenedorIndividual:last-child{
+  margin-left: 50px;
+}
+@media(max-width:1000px){
+  .contenedorIndividual{
+    width: 200px;
+    height: 303px;
   }
-
-  @media (max-width: 1680px){
-    .contenedorIndividual{
-      margin-left: 5%;
-      margin-right: 4%;
-    }
-    .fila{
-      margin-left: 9%;
-      margin-right: 8%
-    }
+  .fila{
+    width: 640px;
   }
-
-  @media (max-width: 1540px){
-    .contenedorIndividual{
-      margin-left: 4%;
-      margin-right: 3%;
-    }
+  .contenedorIndividual:first-child{
+    margin-right: 20px;
   }
-
-  @media (max-width: 1423px){
-    .fila{
-      width: 85%;
-    }
-    .contenedorIndividual{
-      margin-left: 3%;
-      margin-right: 2%;
-    }
+  .contenedorIndividual:last-child{
+    margin-left: 20px;
   }
-
-  /*@media (max-width: 1322px) and (min-width: 1292px){
-    .contenedorIndividual:first-child{
-      margin-left: 1%;
-    }
-    .fila{
-      margin-left: 9%;
-      margin-right: 7%;
-    }
-  }*/
-
-  @media (max-width: 1292px){
-    .contenedorIndividual{
-      margin-left: 1%;
-      margin-right: 1%;
-    }
-    .fila{
-      margin-left: 10%;
-      margin-right: 7%;
-    }
+}
+@media(max-width:685px){
+  .contenedorIndividual{
+    width: 150px;
+    height: 225px;
   }
-
-  @media (max-width: 1130px){
-    .contenedorIndividual{
-      margin-left: 1%;
-      margin-right: 0%;
-    }
-    .fila{
-      margin-left: 7%;
-      margin-right: 5%;
-    }
+  .fila{
+    width: 470px;
   }
-
-  @media (max-width: 1090px){
-    .fila{
-      margin-left: 14%;
-      margin-right: 10%;
-    }
-    .contenedorIndividual{
-      margin-right: 8px;
-      width:230px;
-      height:336px;
-    }
+  .contenedorIndividual:first-child{
+    margin-right: 10px;
   }
-
-  @media (max-width: 1000px){
-    .fila{
-      margin-left: 10%;
-    }
+  .contenedorIndividual:last-child{
+    margin-left: 10px;
   }
-
-  @media (max-width: 900px){
-    .fila{
-      margin-left:6%;
-    }
+  .contenedor p{
+    font-size: 25px;
   }
+}
 
-  @media (max-width: 864px){
-    .contenedorIndividual{
-      width:180px;
-      height:260px;
-      margin-left:3%;
-      margin-right:1%;
-    }
-    .fila{
-      margin-left:100px;
-    }
-    .titulo{
-      font-size: 20px;
-    }
-    .descripcion{
-      font-size: 15px;
-      display: block;
-      margin-top:0px;
-      margin-left: 20px;
-    }
-  }
-
-  @media (max-width: 780px){
-    .fila{
-      margin-left:80px;
-    }
-  }
-
-
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
+ 
 
   @keyframes fadeIn {
     0% {
@@ -322,12 +232,9 @@
     }
     100% {
       opacity:1;
-    }}
-    @media (max-width: 600px) {
-      .fila{
-        height: 80%;
-      }
+    }
   }
+   
   .item{
     float: right;
     margin-right: 2%;
@@ -348,7 +255,11 @@
     font-family: "subpear"; /* para los a de la nav */
     src: url("Drakolomb.otf") format("woff2"); /* chrome、firefox */
   }
-  @media(max-width:770px){
+  @media(max-width:420px){
+    .fila{
+      width:160px ;
+      margin: 0 auto;
+    }
     .titulo{
       margin-left: 10px;
       float:left;
@@ -361,10 +272,18 @@
       display:inline-block;
       margin-top: 0%;
     }
+    .contenedorIndividual{
+      width: 150px;
+      height: 225px;
+      margin-bottom: 50px;
+    }
     .pintura:hover  .cuadro{
       transition-property: height;
       transition-duration: 0s;
-      height: 200px;
+      height: 200px;    
+  }
+  .contendor p{
+    font-size: 25px;
   }
   .pintura:hover  .descripcion{
     animation: fadeIn ease 0s;
@@ -373,6 +292,12 @@
       -o-animation: fadeIn ease 0s;
       -ms-animation: fadeIn ease 0s;
       display: block;
+  }
+  .contenedorIndividual:first-child{
+    margin-right: 0px;
+  }
+  .contenedorIndividual:last-child{
+    margin-left: 0px;
   }
 }
   .tituloNav{

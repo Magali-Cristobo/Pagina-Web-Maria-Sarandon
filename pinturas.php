@@ -71,16 +71,16 @@
         
     </nav>
     <div class="contenedor">
-        <?php
-            $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
-            "Error: No es posible establecer la conexión"
-            );
-            $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
-            //$nombreSerieConsulta=mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
-            $result = mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
-            $row = mysqli_fetch_row($result);
-        ?>
-        <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 40px;margin-top: 2%; margin-bottom: 2%; color: white"><?php echo $row[0] ?></p>
+            <?php
+                    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
+                    "Error: No es posible establecer la conexión"
+                    );
+                    $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
+                    //$nombreSerieConsulta=mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
+                    $result = mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
+                    $row = mysqli_fetch_row($result);
+            ?>
+        <p><?php echo $row[0] ?></p>
             <?php
                     $datos=mysqli_query($conexion,$consulta);
                     $numeroImagen=1;
