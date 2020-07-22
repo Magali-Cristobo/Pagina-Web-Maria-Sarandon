@@ -4,6 +4,7 @@
 .body::after {
   box-sizing: content-box; 
 } */
+<<<<<<< HEAD
 .full_modal-dialog {
   width: 100% !important;
   height: 100% !important;
@@ -21,6 +22,19 @@
   min-height: 100% !important;
   max-height: 100% !important;
 }
+=======
+
+.cuadroGrande{
+  /*height: 100%;
+  width: auto;*/
+}
+
+.bodyModal{
+  margin: 0;
+  height:100%
+}
+
+>>>>>>> 6817302410c04d6cdfa27a7867287a0cbc8696e2
 .bodyIndex{
   margin: 0;
   background-image: url("Fondo.jpg");
