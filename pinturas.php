@@ -153,9 +153,6 @@
             }
           }
           if ($(window).width() < 770) {
-            $(".borrar").remove();
-            $(".borrar").remove();
-            $(".pintura").removeClass("col-lg-2");
             $(".pintura").addClass('pinturaCelular');
           }
           if($(window).width() < 977){

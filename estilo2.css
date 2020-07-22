@@ -4,6 +4,23 @@
 .body::after {
   box-sizing: content-box; 
 } */
+.full_modal-dialog {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100%;
+  min-height: 100% !important;
+  max-width: 98% !important;
+  max-height: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto;
+  margin-right: 0%;
+  margin-left: 0%;
+}
+.full_modal-content {
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+}
 .bodyIndex{
   margin: 0;
   background-image: url("Fondo.jpg");
@@ -70,14 +87,14 @@
   align-items: right;
 }
  .contenedor{
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 .imagen{
-    float: left;
-    width: auto;
-    height: auto;
-    z-index: 2;
+  float: left;
+  width: auto;
+  height: auto;
+  z-index: 2;
   }
 .imagen img{
   width: 110%; 
@@ -93,20 +110,20 @@
 }
 
 .pintura{
-    margin-right: 20px;
-    display: block;
-    float: left;
+  margin-right: 20px;
+  display: block;
+  float: left;
   }
 
 .descripcion{
-    font-size: 19px;
-    display: none;
-    font-family: "Nimbus Sans TW01Con";
-    margin-top: 5px;
+  font-size: 19px;
+  display: none;
+  font-family: "Nimbus Sans TW01Con";
+  margin-top: 5px;
 }
 .titulo{
-    font-family: "Nimbus Sans TW01Con";
-    font-size: 22px;
+  font-family: "Nimbus Sans TW01Con";
+  font-size: 22px;
 }
 .cuadro{
   text-align: center;
@@ -119,17 +136,17 @@
   margin-bottom: 5%;
 }
 .pintura:hover  .cuadro{
-    transition-property: height;
-    transition-duration: 1s;
-    height: 125%;
+  transition-property: height;
+  transition-duration: 1s;
+  height: 125%;
 }
 .pintura:hover  .descripcion{
-    animation: fadeIn ease 2s;
-    -webkit-animation: fadeIn ease 2s;
-    -moz-animation: fadeIn ease 2s;
-    -o-animation: fadeIn ease 2s;
-    -ms-animation: fadeIn ease 2s;
-    display: block; 
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+  display: block; 
 }
 .contenedorIndividual{
   height: 450px;
@@ -143,7 +160,6 @@
   margin-bottom: 2%; 
   color: white
 }
-
 .fila{
   width: 1000px;
   margin: 0 auto;
@@ -187,111 +203,108 @@
     font-size: 25px;
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
- 
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
   }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
   
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-   
-  .item{
-    float: right;
-    margin-right: 2%;
-    font-family:"subpear" ;
-  }
-  .barraExpandida{
-    height: auto;
-  }
-  @font-face {
-    font-family: "Nimbus Sans TW01Con"; /* para las frases */
-    src: url("Nimbus Sans TW01Con.ttf") format("woff2"); /* chrome、firefox */
-  }
+.item{
+  float: right;
+  margin-right: 2%;
+  font-family:"subpear" ;
+}
+.barraExpandida{
+  height: auto;
+}
+@font-face {
+  font-family: "Nimbus Sans TW01Con"; /* para las frases */
+  src: url("Nimbus Sans TW01Con.ttf") format("woff2"); /* chrome、firefox */
+}
 @font-face {
     font-family: "Bdp"; /* para el maria sarandon */
     src: url("gligoth.TTF") format("woff2"); /* chrome、firefox */
+}
+@font-face {
+  font-family: "subpear"; /* para los a de la nav */
+  src: url("Drakolomb.otf") format("woff2"); /* chrome、firefox */
+}
+@media(max-width:420px){
+  .fila{
+    width:160px ;
+    margin: 0 auto;
   }
-  @font-face {
-    font-family: "subpear"; /* para los a de la nav */
-    src: url("Drakolomb.otf") format("woff2"); /* chrome、firefox */
+  .titulo{
+    margin-left: 10px;
+    float:left;
+    display:inline-block;
+    margin-right: 25px;
+    margin-top: -1%;
   }
-  @media(max-width:420px){
-    .fila{
-      width:160px ;
-      margin: 0 auto;
-    }
-    .titulo{
-      margin-left: 10px;
-      float:left;
-      display:inline-block;
-      margin-right: 25px;
-      margin-top: -1%;
-    }
-    .descripcion{
-      float:left;
-      display:inline-block;
-      margin-top: 0%;
-    }
-    .contenedorIndividual{
-      width: 150px;
-      height: 225px;
-      margin-bottom: 50px;
-    }
-    .pintura:hover  .cuadro{
-      transition-property: height;
-      transition-duration: 0s;
-      height: 200px;    
+  .descripcion{
+    float:left;
+    display:inline-block;
+    margin-top: 0%;
+  }
+  .contenedorIndividual{
+    width: 150px;
+    height: 225px;
+    margin-bottom: 50px;
+  }
+  .pintura:hover  .cuadro{
+    transition-property: height;
+    transition-duration: 0s;
+    height: 200px;    
   }
   .contendor p{
     font-size: 25px;
   }
   .pintura:hover  .descripcion{
     animation: fadeIn ease 0s;
-      -webkit-animation: fadeIn ease 0s;
-      -moz-animation: fadeIn ease 0s;
-      -o-animation: fadeIn ease 0s;
-      -ms-animation: fadeIn ease 0s;
-      display: block;
+    -webkit-animation: fadeIn ease 0s;
+    -moz-animation: fadeIn ease 0s;
+    -o-animation: fadeIn ease 0s;
+    -ms-animation: fadeIn ease 0s;
+    display: block;
   }
   .contenedorIndividual:first-child{
     margin-right: 0px;
@@ -300,18 +313,18 @@
     margin-left: 0px;
   }
 }
-  .tituloNav{
-    font-family: "bdp";
-    font-size: 30px;
-  }
+.tituloNav{
+  font-family: "bdp";
+  font-size: 30px;
+}
 
-  .pinturaCelular{
-    margin: 0 auto;
-    margin-bottom:15% ;
-  }
+.pinturaCelular{
+  margin: 0 auto;
+  margin-bottom:15% ;
+}
 .menuDesplegable{
-  margin-right: 2%;
+margin-right: 2%;
 }
 .borrar{
-  z-index: 0;
+z-index: 0;
 }
