@@ -104,39 +104,19 @@
                     </div>
                   </div>
                 </div>
-            </div>
-            
-            <!-- ejmplo modal
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog full_modal-dialog" role="document">
-                <div class="modal-content full_modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                  <div class="tituloDescripcion">
-                    <label>descripcion</label>
-                  </div>
-                  </div>
-                </div>
               </div>
             </div>
-          </div>   -->
-          <!-- ejemplo 2 -->
           <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
           </div>
         <script>
           //funciones para el modal 2
           function openNav() {
-            console.log("entre");
             $("#myNav").css("display","block");
             $("#myNav").css("width","100%");
             var imagen="<img src="+$(this).attr('src')+" class='imagenModal' style='width:300px; height: 450px; float: left;'>";
             $("#myNav").append(imagen);
+            $("#myNav").append("<label class='descripcionModal'>descripcion</label>")
           
           }
           function closeNav() {
@@ -146,16 +126,7 @@
           }
           $('#menu-main > li > .dropdown-toggle').click(function () {
             window.location = $(this).attr('href');
-        });
-        // funciones para el modal 1
-          function mostrarImagen(){
-            var imagen="<img src="+$(this).attr('src')+" class='imagenModal' style='width:300px; height: 450px; float: left;'>";
-            $('.modal-body').append(imagen);
-            $("#exampleModal").modal("show");
-          }
-          function ocultarImagen(){
-            $(".imagenModal").remove();
-          }
+          });
           function agrandarBarra(){//para el menu desplegable
             if($(".navBar").hasClass("barraExpandida")){
               $(".navBar").removeClass("barraExpandida")
@@ -175,7 +146,6 @@
           }
           $("img").click(openNav);
           $(".closebtn").click(closeNav);
-          $(".close").click(ocultarImagen);
           $("#boton").click(agrandarBarra);
         </script>
     </body>
