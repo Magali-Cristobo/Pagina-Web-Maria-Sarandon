@@ -38,7 +38,12 @@
   width:auto; 
   height: 100%;
 }
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media (orientation:landscape){
+  .imagenModal {
+    width: auto;
+    height: 100%;
+  }
+}
 @media screen and (max-height: 450px) {
   .overlay .closebtn {
     font-size: 40px;
@@ -46,40 +51,20 @@
     right: 35px;
   }
 }
-@media(max-height: 850px) {
+@media(max-width: 915px) and (orientation:portrait) {
   .imagenModal {
-    height: 50%;
+    width: auto;
+    height: auto;
   }
 }
+
+
 
 /* *,
 .body::before,
 .body::after {
   box-sizing: content-box; 
 } */
-/* ejemplo modal 
-.full_modal-dialog {
-  width: 100% !important;
-  height: 100% !important;
-  min-width: 100%;
-  min-height: 100% !important;
-  max-width: 98% !important;
-  max-height: 100% !important;
-  padding: 0 !important;
-  margin: 0 auto;
-  margin-right: 0%;
-  margin-left: 0%;
-}
-.full_modal-content {
-  height: 100% !important;
-  min-height: 100% !important;
-  max-height: 100% !important;
-  display: flex;
-  justify-content: center;
-}
-.tituloDescripcion{
-  text-align: center;
-}*/
 .bodyIndex{
   margin: 0;
   background-image: url("Fondo.jpg");
@@ -176,13 +161,13 @@
 
 .descripcion{
   font-size: 19px;
-  display: none;
   font-family: "Nimbus Sans TW01Con";
-  margin-top: 5px;
 }
 .titulo{
   font-family: "Nimbus Sans TW01Con";
   font-size: 22px;
+  color: white;
+  margin-bottom: 0px;
 }
 .cuadro{
   text-align: center;
@@ -192,25 +177,13 @@
   border-radius: 5%;
 }
 .fila{
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
-.pintura:hover  .cuadro{
-  transition-property: height;
-  transition-duration: 1s;
-  height: 125%;
-}
-.pintura:hover  .descripcion{
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
-  -moz-animation: fadeIn ease 2s;
-  -o-animation: fadeIn ease 2s;
-  -ms-animation: fadeIn ease 2s;
-  display: block; 
-}
+
 .contenedorIndividual{
   height: 450px;
   width: 300px;
-  margin-bottom: 10%;
+  margin-bottom: 80px;
 }
 .contenedor p{
   font-family: 'Nimbus Sans TW01Con'; 
@@ -223,10 +196,10 @@
   width: 1000px;
   margin: 0 auto;
 }
-.contenedorIndividual:first-child{
+.contenedorIndividual:nth-child(1){
   margin-right: 50px;
 }
-.contenedorIndividual:last-child{
+.contenedorIndividual:nth-child(3){
   margin-left: 50px;
 }
 @media(max-width:1000px){
@@ -237,10 +210,10 @@
   .fila{
     width: 640px;
   }
-  .contenedorIndividual:first-child{
+  .contenedorIndividual:nth-child(1){
     margin-right: 20px;
   }
-  .contenedorIndividual:last-child{
+  .contenedorIndividual:nth-child(3){
     margin-left: 20px;
   }
 }
@@ -248,14 +221,15 @@
   .contenedorIndividual{
     width: 150px;
     height: 225px;
+    margin-bottom: 100px;
   }
   .fila{
     width: 470px;
   }
-  .contenedorIndividual:first-child{
+  .contenedorIndividual:nth-child(1){
     margin-right: 10px;
   }
-  .contenedorIndividual:last-child{
+  .contenedorIndividual:nth-child(3){
     margin-left: 10px;
   }
   .contenedor p{
@@ -329,46 +303,24 @@
 }
 @media(max-width:420px){
   .fila{
-    width:160px ;
+    width:160px;
     margin: 0 auto;
   }
   .titulo{
-    margin-left: 10px;
-    float:left;
-    display:inline-block;
-    margin-right: 25px;
     margin-top: -1%;
-  }
-  .descripcion{
-    float:left;
-    display:inline-block;
-    margin-top: 0%;
   }
   .contenedorIndividual{
     width: 150px;
     height: 225px;
-    margin-bottom: 50px;
-  }
-  .pintura:hover  .cuadro{
-    transition-property: height;
-    transition-duration: 0s;
-    height: 200px;    
+    margin-bottom: 120px;
   }
   .contendor p{
     font-size: 25px;
   }
-  .pintura:hover  .descripcion{
-    animation: fadeIn ease 0s;
-    -webkit-animation: fadeIn ease 0s;
-    -moz-animation: fadeIn ease 0s;
-    -o-animation: fadeIn ease 0s;
-    -ms-animation: fadeIn ease 0s;
-    display: block;
-  }
-  .contenedorIndividual:first-child{
+  .contenedorIndividual:nth-child(1){
     margin-right: 0px;
   }
-  .contenedorIndividual:last-child{
+  .contenedorIndividual:nth-child(3){
     margin-left: 0px;
   }
 }
@@ -386,4 +338,10 @@ margin-right: 2%;
 }
 .borrar{
 z-index: 0;
+}
+img:hover{ /*para que cuando pongas el cursor en la imagen*/
+  -webkit-filter: brightness(40%);
+}
+.imagenModal:hover{
+  -webkit-filter: brightness(100%);
 }
