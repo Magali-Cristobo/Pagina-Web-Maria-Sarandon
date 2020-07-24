@@ -59,7 +59,7 @@
             <p style="font-family: 'Nimbus Sans TW01Con'; font-size: 25px;margin-top: 5%; margin-bottom: 5%;">Ensayos Orgánicos</p>
             <div class="row fila">
               <div class="contenedorIndividual">
-                <div class="pintura" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <div class="pintura">
                   <div class="imagen">
                       <img src="Imagenes/SerieArboles2015-2018/abrazo130x140.jpg">
                   </div>
@@ -81,7 +81,7 @@
                   </div>
                 </div>
                 <div class="contenedorIndividual">
-                <div class="pintura">
+                <div class="pintura" >
                   <div class="imagen">
                       <img src="Imagenes/SerieArboles2015-2018/abrazo130x140.jpg">
                   </div>
@@ -106,7 +106,7 @@
                 </div>
             </div>
             
-            <!-- Modal -->
+            <!-- ejmplo modal
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog full_modal-dialog" role="document">
                 <div class="modal-content full_modal-content">
@@ -117,21 +117,46 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                  <img src="Imagenes/SerieArboles2015-2018/abrazo130x140.jpg" style="width:300px; height: 450px; float: left;">
                   <div class="tituloDescripcion">
                     <label>descripcion</label>
                   </div>
-                  
                   </div>
                 </div>
               </div>
             </div>
-          </div>  
+          </div>   -->
+          <!-- ejemplo 2 -->
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+          </div>
         <script>
+          //funciones para el modal 2
+          function openNav() {
+            console.log("entre");
+            $("#myNav").css("display","block");
+            $("#myNav").css("width","100%");
+            var imagen="<img src="+$(this).attr('src')+" class='imagenModal' style='width:300px; height: 450px; float: left;'>";
+            $("#myNav").append(imagen);
+          
+          }
+          function closeNav() {
+            $("#myNav").css("display","none");
+            $("#myNav").css("width","0%");
+            $(".imagenModal").remove();
+          }
           $('#menu-main > li > .dropdown-toggle').click(function () {
             window.location = $(this).attr('href');
         });
-          function agrandarBarra(){
+        // funciones para el modal 1
+          function mostrarImagen(){
+            var imagen="<img src="+$(this).attr('src')+" class='imagenModal' style='width:300px; height: 450px; float: left;'>";
+            $('.modal-body').append(imagen);
+            $("#exampleModal").modal("show");
+          }
+          function ocultarImagen(){
+            $(".imagenModal").remove();
+          }
+          function agrandarBarra(){//para el menu desplegable
             if($(".navBar").hasClass("barraExpandida")){
               $(".navBar").removeClass("barraExpandida")
             }
@@ -139,7 +164,7 @@
               $(".navbar"). addClass("barraExpandida");
             }
           }
-          if ($(window).width() < 770) {
+          if ($(window).width() < 770) {//para el modo celular
             $(".pintura").addClass('pinturaCelular');
           }
           if($(window).width() < 977){
@@ -148,6 +173,9 @@
           else{
             $(".titulo2").remove();
           }
+          $("img").click(openNav);
+          $(".closebtn").click(closeNav);
+          $(".close").click(ocultarImagen);
           $("#boton").click(agrandarBarra);
         </script>
     </body>
