@@ -140,11 +140,30 @@
                     }
                 ?>
                 </div>
-    <script>
-        $('#menu-main > li > .dropdown-toggle').click(function () {
+          </div> 
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+            <div class="overlay-content">
+
+            </div>
+          </div> 
+        <script>
+          //funciones para el modal 2
+          function openNav() {
+            $("#myNav").css("display","block");
+            $("#myNav").css("width","100%");
+            var imagen="<img src="+$(this).attr('src')+" class='imagenModal' style='width:auto; height: 100%;'>";
+            $(".overlay-content").append(imagen);          
+          }
+          function closeNav() {
+            $("#myNav").css("display","none");
+            $("#myNav").css("width","0%");
+            $(".imagenModal").remove();
+          }
+          $('#menu-main > li > .dropdown-toggle').click(function () {
             window.location = $(this).attr('href');
-        });
-          function agrandarBarra(){
+          });
+          function agrandarBarra(){//para el menu desplegable
             if($(".navBar").hasClass("barraExpandida")){
               $(".navBar").removeClass("barraExpandida")
             }
@@ -152,7 +171,7 @@
               $(".navbar"). addClass("barraExpandida");
             }
           }
-          if ($(window).width() < 770) {
+          if ($(window).width() < 770) {//para el modo celular
             $(".pintura").addClass('pinturaCelular');
           }
           if($(window).width() < 977){
@@ -161,9 +180,9 @@
           else{
             $(".titulo2").remove();
           }
-          
+          $("img").click(openNav);
+          $(".closebtn").click(closeNav);
           $("#boton").click(agrandarBarra);
         </script>
-    
     </body>
 </html>

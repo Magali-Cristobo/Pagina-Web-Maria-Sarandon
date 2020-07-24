@@ -96,7 +96,7 @@
                 <div class="contenedorIndividual">
                   <div class='pintura'>
                     <div class='imagen'>
-                      <img src='Imagenes/SerieArboles2015-2018/Baobab185x140.jpg'>
+                      <img src='Imagenes/EnsayosOrganicos/Composicion1-150x1002019.jpg'>
                     </div>
                     <div class='cuadro'>
                       <label class='titulo'>Baobab</label>
@@ -108,16 +108,17 @@
             </div>
           <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
+            <div class="overlay-content">
+
+            </div>
           </div>
         <script>
           //funciones para el modal 2
           function openNav() {
             $("#myNav").css("display","block");
             $("#myNav").css("width","100%");
-            var imagen="<img src="+$(this).attr('src')+" class='imagenModal' style='width:300px; height: 450px; float: left;'>";
-            $("#myNav").append(imagen);
-            $("#myNav").append("<label class='descripcionModal'>descripcion</label>")
-          
+            var imagen="<img src="+$(this).attr('src')+" class='imagenModal'>";
+            $(".overlay-content").append(imagen);          
           }
           function closeNav() {
             $("#myNav").css("display","none");
