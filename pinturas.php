@@ -54,7 +54,7 @@
                     </div> 
                 </li>
                 <li class="nav-item item">
-                    <a class="nav-link" href="#">Work in Progress</a>
+                    <a class="nav-link" href="workInProgress.php">Work in Progress</a>
                 </li>
                 <li class="nav-item item">
                     <a class="nav-link" href="#">CV</a>
@@ -75,7 +75,6 @@
                     "Error: No es posible establecer la conexión"
                     );
                     $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
-                    //$nombreSerieConsulta=mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
                     $result = mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
                     $row = mysqli_fetch_row($result);
             ?>
@@ -146,16 +145,21 @@
           </div> 
         <script>
           //funciones para el modal 2
+          var modalMostrado=false;
           function openNav() {
             $("#myNav").css("display","block");
             $("#myNav").css("width","100%");
-            var imagen="<img src="+$(this).attr('src')+" class='imagenModal'>";
-            $(".overlay-content").append(imagen);          
+            if(!modalMostrado){
+                var imagen="<img src="+$(this).attr('src')+" class='imagenModal'>";
+                $(".overlay-content").append(imagen);
+                modalMostrado=true;
+            }      
           }
           function closeNav() {
             $("#myNav").css("display","none");
             $("#myNav").css("width","0%");
             $(".imagenModal").remove();
+            modalMostrado=false;
           }
           $('#menu-main > li > .dropdown-toggle').click(function () {
             window.location = $(this).attr('href');

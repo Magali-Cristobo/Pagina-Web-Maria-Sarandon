@@ -119,14 +119,14 @@
   margin-right: 200px;
   float: right; 
 }
- .navBar{
+.navBar{
   width: 100%;
-  position:fixed; 
+  position:fixed !important; 
   top:0;
   z-index: 3;/*para que quede por arriba de la frase*/
   height:20%;
  }
- .navBar ul{
+.navBar ul{
   width:80%;
   align-items: right;
 }
@@ -162,6 +162,7 @@
 .descripcion{
   font-size: 19px;
   font-family: "Nimbus Sans TW01Con";
+  color: white;
 }
 .titulo{
   font-family: "Nimbus Sans TW01Con";
@@ -307,7 +308,11 @@
     margin: 0 auto;
   }
   .titulo{
+    font-size: 20px;
     margin-top: -1%;
+  }
+  .descripcion{
+    font-size: 17px;
   }
   .contenedorIndividual{
     width: 150px;
@@ -336,12 +341,23 @@
 .menuDesplegable{
 margin-right: 2%;
 }
-.borrar{
-z-index: 0;
-}
 img:hover{ /*para que cuando pongas el cursor en la imagen*/
   -webkit-filter: brightness(40%);
+  z-index: 0;
 }
 .imagenModal:hover{
   -webkit-filter: brightness(100%);
+}
+h3{
+  margin-left: 5px
+}
+.workInprogress{
+  z-index: 1;
+  height:100%;
+  background-color:white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 100%; 
+  margin-top: 10.5%
 }

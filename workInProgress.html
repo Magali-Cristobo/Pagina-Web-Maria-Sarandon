@@ -1,26 +1,71 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="estilo.css">
-    </head>
-    <body>
-        <div class="row">
-            <div class="column">
-              <img src="Imagenes/Serie Arboles 2015-2018/Abrazo 130x140.jpg">
-              <img src="Imagenes/Serie Arboles 2015-2018/Baobab 185x140.jpg">
-              <img src="Imagenes/Serie Arboles 2015-2018/Cicatriz 145x145.JPG">
-              <img src="Imagenes/Serie Arboles 2015-2018/Encuentro 150x110.JPG">
-            </div>
-            <div class="column">
-              <img src="Imagenes/Serie Arboles 2015-2018/Nucleo2 80x80.jpg">
-              <img src="Imagenes/Serie Arboles 2015-2018/Enlace 140x100.jpg">
-              <img src="Imagenes/Serie Arboles 2015-2018/Nocturno 190x90.png">
-              <img src="Imagenes/Serie Arboles 2015-2018/Nucleo1 80x80.jpg">
-            </div>
-            <div class="column">
-              <img src="Imagenes/Serie Arboles 2015-2018/Paisaje 160x130.jpg">
-              <img src="Imagenes/Serie Arboles 2015-2018/Reunion 180x140.JPG">
-              <img src="Imagenes/Serie Arboles 2015-2018/Tertulia 140x150 2020.JPG">
-            </div>
-          </div>
-    </body>
+        <title>Slick Playground</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/path/to/slick.css">
+        <link rel="stylesheet" href="/path/to/slick-theme.css">
+</head>
+<body>
+    <div class="slider demo">
+        <div> Slide  1 </div>
+        <div> Slide  2 </div>
+        <div> Slide  3 </div>
+    </div>
+    <script src="/path/to/jquery.min.js"></script>
+    <script src="/path/to/slick.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.demo').slick();
+    });
+
+      // Before slide change callback
+$('.demo').on('afterChange',function(event, slick, currentSlide){
+  // do something
+});
+// Before slide change callback
+$('.demo').on('beforeChange',function(event, slick, currentSlide, nextSlide){
+  // do something
+});
+// Fires after a breakpoint is hit
+$('.demo').on('breakpoint',function(event, slick, breakpoint){
+  // do something
+});
+// When slider is destroyed, or unslicked.
+$('.demo').on('destroy',function(event, slick){
+  // do something
+});
+// Fires when an edge is overscrolled in non-infinite mode.
+$('.demo').on('edge',function(event, slick, direction){
+  // do something
+});
+// When Slick initializes for the first time callback.
+// Note that this event should be defined before initializing the slider.
+$('.demo').on('init',function(event, slick){
+  // do something
+});
+// Every time Slick (re-)initializes callback
+$('.demo').on('reInit',function(event, slick){
+  // do something
+});
+// Every time Slick recalculates position
+$('.demo').on('setPosition',function(event, slick){
+  // do something
+});
+// Fires after swipe/drag
+$('.demo').on('swipe',function(event, slick, direction){
+  // do something
+});
+// Fires after image loads lazily
+$('.demo').on('lazyLoaded',function(event, slick, image, imageSource){
+  // do something
+});
+// Fires after image fails to load
+$('.demo').on('lazyLoadError',function(event, slick, image, imageSource){
+  // do something
+});
+
+</script>
+
+</body>
 </html>
