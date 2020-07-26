@@ -121,7 +121,7 @@
 }
 .navBar{
   width: 100%;
-  position:fixed !important; 
+  position:fixed; 
   top:0;
   z-index: 3;/*para que quede por arriba de la frase*/
   height:20%;
@@ -359,5 +359,5 @@ h3{
   margin-right: auto;
   margin-bottom: auto;
   width: 100%; 
-  margin-top: 10.5%
+  text-align: center;
 }
