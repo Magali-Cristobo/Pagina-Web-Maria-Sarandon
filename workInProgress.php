@@ -30,7 +30,7 @@
         <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css">
         <link rel="stylesheet" type="text/css" href="estilo2.css">
     </head>
-    <body>
+    <body style="background-color:#BDBFC1">
       <nav class="navbar navbar-expand-lg navbar-light bg-light navBar" style="position:relative;">
       <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -70,7 +70,7 @@
         </div>
   </nav>
       <div class="workInProgress">
-        <h3>Work in Progress</h3>
+        <h3 style="color: white">Work in Progress</h3>
         <section class="variable slider">
           <div><img src="Imagenes/WorkInProgress/1.jpeg"></div>
           <div><img src="Imagenes/WorkInProgress/2.jpeg"></div>
@@ -80,6 +80,7 @@
           <div><img src="Imagenes/WorkInProgress/6.jpeg"></div>
           <div><img src="Imagenes/WorkInProgress/7.jpeg"></div>
         </section>
+        <p>DE WILLAM MORRIS A LOS ‘60 Se trata de temperas sobre papel en tamaño medio. Las obras recrean los empapelados del diseñador Willam Morris y los ambientes victorianos  que se van transformando en papeles de los ‘60 y ‘70 como alegoría de las profundas transformaciones que tuvo la sociedad en ese periodo. Utilizo el papel tapiz para simbolizar el espacio donde la personas llevaban su vida cotidiana y su intimidad.</p>
       </div>
       <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
@@ -129,7 +130,8 @@
       $(".titulo2").remove();
     }
     $("img").click(openNav);
-          $(".closebtn").click(closeNav);
+    $(".closebtn").click(closeNav);
+    $("#boton").click(agrandarBarra);
       </script>
     </body>
 </html>
