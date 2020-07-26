@@ -1,5 +1,5 @@
 <?php
-    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
+    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
         "Error: No es posible establecer la conexión"
         );
 ?>
@@ -129,25 +129,7 @@
         dots: false,
         infinite: true,
         variableWidth: true,
-        adaptiveHeight: true,
-        responsive: [{
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            infinite: true
-          }
-        }, {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            dots: true
-          }
-        }, {
-
-          breakpoint: 300,
-          settings: "unslick" // destroys slick
-        }]
-          
+        adaptiveHeight: true,         
       });
     });
     var modalMostrado=false;
