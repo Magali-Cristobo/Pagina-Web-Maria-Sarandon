@@ -349,7 +349,7 @@ img:hover{ /*para que cuando pongas el cursor en la imagen*/
   -webkit-filter: brightness(100%);
 }
 h3{
-  margin-left: 5px
+  margin-top: 40px;
 }
 .workInprogress{
   z-index: 1;
@@ -360,4 +360,39 @@ h3{
   margin-bottom: auto;
   width: 100%; 
   text-align: center;
+}
+/*estilo del slider*/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+    width: 50%;
+    margin: 70px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-slide {
+  height:300px;
+}
+
+.slick-slide img {
+  height:300px;
 }

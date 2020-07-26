@@ -28,44 +28,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css">
-        <style type="text/css">
-          html, body {
-            margin: 0;
-            padding: 0;
-          }
-
-          * {
-            box-sizing: border-box;
-          }
-
-          .slider {
-              width: 50%;
-              margin: 100px auto;
-          }
-
-          .slick-slide {
-            margin: 0px 20px;
-          }
-
-          .slick-slide img {
-            width: auto;
-          }
-
-          .slick-prev:before,
-          .slick-next:before {
-            color: black;
-          }
-
-          .slick-slide {
-            height:200px;
-      }
-
-          .slick-slide img {
-            height:200px;
-          }   
-        </style>
+        <link rel="stylesheet" type="text/css" href="estilo2.css">
     </head>
-    <body class="bodyIndex">
+    <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light navBar" style="position:relative;">
       <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -124,33 +89,15 @@
       <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="slick-master/slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
+    var modalMostrado=false;
     $(document).on('ready', function() {
       $(".variable").slick({
         dots: false,
         infinite: true,
         variableWidth: true,
         adaptiveHeight: true,
-        responsive: [{
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            infinite: true
-          }
-        }, {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            dots: true
-          }
-        }, {
-
-          breakpoint: 300,
-          settings: "unslick" // destroys slick
-        }]
-          
       });
     });
-    var modalMostrado=false;
       function openNav() {
         $("#myNav").css("display","block");
         $("#myNav").css("width","100%");
