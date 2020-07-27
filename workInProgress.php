@@ -1,5 +1,5 @@
 <?php
-    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
+    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
         "Error: No es posible establecer la conexión"
         );
 ?>
@@ -30,12 +30,12 @@
         <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css">
         <link rel="stylesheet" type="text/css" href="estilo2.css">
     </head>
-    <body style="background-color:#BDBFC1">
+    <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light navBar" style="position:relative;">
       <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand mx-auto tituloNav titulo2" style="display: block;" href="#">Maria Sarandon</a>
+      <a class="navbar-brand mx-auto tituloNav titulo2" style="display: block;" href="index.php">Maria Sarandon</a>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mr-auto">
             <a class="navbar-brand mx-auto tituloNav titulo1" href="index.php">Maria Sarandon</a>
@@ -70,7 +70,7 @@
         </div>
   </nav>
       <div class="workInProgress">
-        <h3 style="color: white">Work in Progress</h3>
+        <h3>Work in Progress</h3>
         <section class="variable slider">
           <div><img src="Imagenes/WorkInProgress/1.jpeg"></div>
           <div><img src="Imagenes/WorkInProgress/2.jpeg"></div>

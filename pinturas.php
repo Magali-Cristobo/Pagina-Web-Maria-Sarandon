@@ -1,6 +1,6 @@
 <?php
     $numeroSerie=$_GET["numeroSerie"];
-    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
+    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
         "Error: No es posible establecer la conexión"
         );
     $queryFondo=mysqli_query($conexion, "SELECT colorFondo FROM serie where idSerie=$numeroSerie");
@@ -34,7 +34,7 @@
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand mx-auto tituloNav titulo2" style="display: block;" href="#">Maria Sarandon</a>
+        <a class="navbar-brand mx-auto tituloNav titulo2" style="display: block;" href="index.php">Maria Sarandon</a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
               <a class="navbar-brand mx-auto tituloNav titulo1" href="index.php">Maria Sarandon</a>
@@ -71,7 +71,7 @@
     </nav>
     <div class="contenedor">
             <?php
-                    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
+                    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
                     "Error: No es posible establecer la conexión"
                     );
                     $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
