@@ -98,6 +98,7 @@
         variableWidth: true,
         adaptiveHeight: true,
       });
+      $(".workInProgress").css("display","block");
     });
       function openNav() {
         $("#myNav").css("display","block");
