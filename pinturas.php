@@ -1,6 +1,6 @@
 <?php
     $numeroSerie=$_GET["numeroSerie"];
-    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
+    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
         "Error: No es posible establecer la conexión"
         );
     $queryFondo=mysqli_query($conexion, "SELECT colorFondo FROM serie where idSerie=$numeroSerie");
@@ -71,14 +71,14 @@
     </nav>
     <div class="contenedor">
             <?php
-                    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
+                    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
                     "Error: No es posible establecer la conexión"
                     );
                     $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
                     $result = mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
                     $row = mysqli_fetch_row($result);
             ?>
-        <p><?php echo $row[0] ?></p>
+        <p class="titulo"><?php echo $row[0] ?></p>
             <?php
                     $datos=mysqli_query($conexion,$consulta);
                     $numeroImagen=1;
@@ -94,8 +94,8 @@
                                     <img src='$imagen' style='cursor:pointer'>
                                 </div>
                                 <div class='cuadro'>
-                                    <label class='titulo'>$titulo</label>
-                                    <label class='descripcion'>$descripcion</label>
+                                    <p class='tituloCuadro'>$titulo</p>
+                                    <p class='descripcion'>$descripcion</p>
                                 </div>
                             </div>
                             </div>";
@@ -110,8 +110,8 @@
                                         <img src='$imagen' style='cursor:pointer'>
                                     </div>
                                     <div class='cuadro'>
-                                        <label class='titulo'>$titulo</label>
-                                        <label class='descripcion'>$descripcion</label>
+                                        <p class='tituloCuadro'>$titulo</p>
+                                        <p class='descripcion'>$descripcion</p>
                                     </div>
                                 </div>
                             </div>";
@@ -125,7 +125,8 @@
                                         <img src='$imagen' style='cursor:pointer'>
                                     </div>
                                     <div class='cuadro'>
-                                        <label class='titulo'>$titulo</label>
+                                        <p class='tituloCuadro'>$titulo</p>
+                                        <p class='descripcion'>$descripcion</p>
                                     </div>
                                 </div>
                             </div>

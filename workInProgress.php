@@ -1,7 +1,7 @@
 <?php
-    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
-        "Error: No es posible establecer la conexión"
-        );
+    $conexion=mysqli_connect("10.0.10.128:3306","maguchi_maga","Benjamin1510","maguchi_mariasarandondb")OR DIE (
+                              "Error: No es posible establecer la conexión"
+                              );
 ?>
 <html>
     <head>

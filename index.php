@@ -32,7 +32,7 @@
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <?php 
                             $i=0;
-                            $conexion=mysqli_connect("localhost","root","6874","mariasarandondb");
+                            $conexion=mysqli_connect("localhost","root","","mariasarandondb");
                             $consulta= "SELECT nombreSerie from serie";
                             $datos= mysqli_query ($conexion,$consulta);
                             while($fila =mysqli_fetch_array($datos)){

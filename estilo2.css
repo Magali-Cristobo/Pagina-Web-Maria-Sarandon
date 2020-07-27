@@ -167,6 +167,7 @@
   height: 100%; 
   z-index: 15;
   Object-fit: cover;
+  margin-top: -3px;
 }
 
 .fila{
@@ -180,23 +181,11 @@
   display: block;
   float: left;
   }
-
-.descripcion{
-  font-size: 19px;
-  font-family: "Nimbus Sans TW01Con";
-  color: white;
-}
-.titulo{
-  font-family: "Nimbus Sans TW01Con";
-  font-size: 22px;
-  color: white;
-  margin-bottom: 0px;
-}
 .cuadro{
-  text-align: center;
+  text-align: left;
   background-color: white;
   width: 100%; 
-  height: 100%; 
+  height: 90%; 
   border-radius: 5%;
 }
 .fila{
@@ -206,15 +195,28 @@
 .contenedorIndividual{
   height: 450px;
   width: 300px;
-  margin-bottom: 80px;
+  margin-bottom: 135px;
 }
-.contenedor p{
+.titulo{
   font-family: 'Nimbus Sans TW01Con'; 
-  font-size: 40px;
+  font-size: 36px;
   margin-top: 2%; 
   margin-bottom: 2%; 
-  color: white
+  color: white;
 }
+.descripcion{
+  font-size: 22px;
+  font-family: "Nimbus Sans TW01Con";
+  color: white;
+}
+.tituloCuadro{
+  font-family: "Nimbus Sans TW01Con";
+  font-size: 30px;
+  color: white;
+  margin-bottom: 0px;
+}
+
+
 .fila{
   width: 1000px;
   margin: 0 auto;
@@ -239,6 +241,12 @@
   .contenedorIndividual:nth-child(3){
     margin-left: 20px;
   }
+  .tituloCuadro{
+    font-size: 26px;
+  }
+  .descripcion{
+    font-size: 18px;
+  }
 }
 @media(max-width:685px){
   .contenedorIndividual{
@@ -255,8 +263,14 @@
   .contenedorIndividual:nth-child(3){
     margin-left: 10px;
   }
-  .contenedor p{
+  .titulo{
     font-size: 25px;
+  }
+  .tituloCuadro{
+    font-size: 22px;
+  }
+  .descripcion{
+    font-size: 14px;
   }
 }
 @keyframes fadeIn {
@@ -326,10 +340,10 @@
 }
 @media(max-width:420px){
   .fila{
-    width:160px;
+    width:150px;
     margin: 0 auto;
   }
-  .titulo{
+  .tituloCuadro{
     font-size: 20px;
     margin-top: -1%;
   }
