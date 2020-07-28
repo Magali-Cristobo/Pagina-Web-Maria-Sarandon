@@ -1,6 +1,6 @@
 <?php
     $numeroSerie=$_GET["numeroSerie"];
-    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
+    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE (
         "Error: No es posible establecer la conexión"
         );
     $queryFondo=mysqli_query($conexion, "SELECT colorFondo FROM serie where idSerie=$numeroSerie");
@@ -27,7 +27,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <link type="text/css" rel="stylesheet" href="estilo2.css">    
+        <link type="text/css" rel="stylesheet" href="estilo.css">    
     </head>
     <body class="body" style="background-color:<?php echo $rowFondo[0] ?>; margin-bottom: 2%;margin: 0; ">
         <nav class="navbar navbar-expand-lg navbar-light bg-light navBar" style="position:relative;">
@@ -71,9 +71,6 @@
     </nav>
     <div class="contenedor">
             <?php
-                    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE (
-                    "Error: No es posible establecer la conexión"
-                    );
                     $consulta="select nombreArchivo, descripcion, nombre from pintura where Serie_idSerie=$numeroSerie";
                     $result = mysqli_query($conexion, "SELECT nombreSerie FROM serie WHERE idSerie=$numeroSerie");
                     $row = mysqli_fetch_row($result);
