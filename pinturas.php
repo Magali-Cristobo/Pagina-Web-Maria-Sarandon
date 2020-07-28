@@ -57,10 +57,10 @@
                     <a class="nav-link" href="workInProgress.php">Work in Progress</a>
                 </li>
                 <li class="nav-item item">
-                    <a class="nav-link" href="#">CV</a>
+                    <a class="nav-link" href="cv.php">CV</a>
                 </li>
                 <li class="nav-item item">
-                    <a class="nav-link" href="#">Taller / clases</a>
+                    <a class="nav-link" href="tallerYClases.php#">Taller / Clases</a>
                 </li>
                 <li class="nav-item item">
                   <a class="nav-link" href="#">Contacto</a>

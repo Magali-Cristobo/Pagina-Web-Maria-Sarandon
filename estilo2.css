@@ -416,8 +416,8 @@ html, body {
 }
 
 .slider {
-    width: 50%;
-    margin: 70px auto;
+  width: 50%;
+  margin: 70px auto;
 }
 
 .slick-slide {
@@ -468,5 +468,25 @@ html, body {
 
   .slick-slide img {
     height:200px;
+  }
+}
+.retrato{
+  float: right;
+  padding: 16px;
+}
+.retrato:hover{
+  -webkit-filter: brightness(100%);
+}
+@media(max-width: 767px){
+  .container p{
+    text-align: justify;
+  }
+  .container{
+    text-align: center;
+    align-items: center;
+  }
+  .retrato{
+    width: 100%;
+    height: auto;
   }
 }

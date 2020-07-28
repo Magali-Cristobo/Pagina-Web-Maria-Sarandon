@@ -5,7 +5,7 @@
 ?>
 <html>
     <head>
-        <title>Work in Progress</title>
+        <title>Taller / Clases</title>
         <link rel="icon" type="" href="Imagenes/iconoPag.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -61,17 +61,28 @@
                   <a class="nav-link" href="cv.php">CV</a>
               </li>
               <li class="nav-item item">
-                  <a class="nav-link" href="tallerYClases.php">Taller / clases</a>
+                  <a class="nav-link" href="tallerYClases.php">Taller / Clases</a>
               </li>
               <li class="nav-item item">
                 <a class="nav-link" href="#">Contacto</a>
             </li>
           </ul>
         </div>
-  </nav>
-      <div class="workInProgress">
-        <h3>Work in Progress</h3>
-        <section class="variable slider">
+    </nav>
+    <div class="container" >
+      <h1>Taller de Dibujo y Pintura</h1>
+      <h4>clases</h4>
+      <div class="container" style="background-color: black;position: absolute; width: 80%">
+        <label style="color: white;display:block">
+          Horario clases por la mañana y tarde/noche. <br>
+          Adultos y niños <br>
+          Clases grupales
+        </label>
+        <label style="color: white;display: block;width: 40%"><b>En un clima que propicie la investigación, la charla y el intercambio fluído, experimentación, el Taller de dibujo y pintura, que se dicta hace mas de 8 años, es un espacio el cual cada alumno indaga en el desarrollo de su proyecto personal.</b></label> 
+        <label style="display: block;color: white;">Contacto
+        mariasarandon@hotmail.com
+​        </label>         
+        <section class="variable slider" style="float: right;  margin: 0px auto;">
           <div><img src="Imagenes/WorkInProgress/1.jpeg"></div>
           <div><img src="Imagenes/WorkInProgress/2.jpeg"></div>
           <div><img src="Imagenes/WorkInProgress/3.jpeg"></div>
@@ -80,59 +91,43 @@
           <div><img src="Imagenes/WorkInProgress/6.jpeg"></div>
           <div><img src="Imagenes/WorkInProgress/7.jpeg"></div>
         </section>
-        <p>DE WILLAM MORRIS A LOS ‘60 Se trata de temperas sobre papel en tamaño medio. Las obras recrean los empapelados del diseñador Willam Morris y los ambientes victorianos  que se van transformando en papeles de los ‘60 y ‘70 como alegoría de las profundas transformaciones que tuvo la sociedad en ese periodo. Utilizo el papel tapiz para simbolizar el espacio donde la personas llevaban su vida cotidiana y su intimidad.</p>
       </div>
-      <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn">&times;</a>
-            <div class="overlay-content">
-            </div>
-          </div>
-      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="slick-master/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    var modalMostrado=false;
-    $(document).on('ready', function() {
+    <script type="text/javascript">
+      $('#menu-main > li > .dropdown-toggle').click(function () {
+          window.location = $(this).attr('href');
+          });
+      $(document).on('ready', function() {
       $(".variable").slick({
         dots: false,
         infinite: true,
         variableWidth: true,
         adaptiveHeight: true,
+        autoplay: true,
+        slidesToShow: 1,
+        nextArrow: "<button type='button' class='slick-prev'></button>",
       });
       $(".workInProgress").css("display","block");
-    });
-      function openNav() {
-        $("#myNav").css("display","block");
-        $("#myNav").css("width","100%");
-        if(!modalMostrado){
-            var imagen="<img src="+$(this).attr('src')+" class='imagenModal'>";
-            $(".overlay-content").append(imagen);
-            modalMostrado=true;
-        }      
+      });
+      function agrandarBarra(){//para el menu desplegable
+        if($(".navBar").hasClass("barraExpandida")){
+          $(".navBar").removeClass("barraExpandida")
+        }
+        else{
+          $(".navbar"). addClass("barraExpandida");
+        }
       }
-      function closeNav() {
-        $("#myNav").css("display","none");
-        $("#myNav").css("width","0%");
-        $(".imagenModal").remove();
-        modalMostrado=false;
-      }
-
-    function agrandarBarra(){//para el menu desplegable
-      if($(".navBar").hasClass("barraExpandida")){
-        $(".navBar").removeClass("barraExpandida")
+      if($(window).width() < 977){
+        $(".titulo1").remove();
       }
       else{
-        $(".navbar"). addClass("barraExpandida");
+        $(".titulo2").remove();
       }
-    }
-    if($(window).width() < 977){
-      $(".titulo1").remove();
-    }
-    else{
-      $(".titulo2").remove();
-    }
-    $("img").click(openNav);
-    $(".closebtn").click(closeNav);
-    $("#boton").click(agrandarBarra);
-      </script>
-    </body>
+      $("#boton").click(agrandarBarra);
+
+    </script>
+  </body>
 </html>
