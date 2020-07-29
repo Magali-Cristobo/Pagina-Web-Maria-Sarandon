@@ -1,5 +1,5 @@
 <?php
-    $conexion=mysqli_connect("localhost","root","6874","mariasarandondb")OR DIE ("Error: No es posible establecer la conexión");
+    $conexion=mysqli_connect("localhost","root","","mariasarandondb")OR DIE ("Error: No es posible establecer la conexión");
 ?>
 <html>
     <head>
@@ -7,23 +7,13 @@
         <link rel="icon" type="" href="Imagenes/iconoPag.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
-        <!-- JS, Popper.js, and jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <link type="text/css" rel="stylesheet" href="estilo.css">    
-        <meta charset="UTF-8">
+        <!-- Estilos -->
         <link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css">
         <link rel="stylesheet" type="text/css" href="estilo.css">
@@ -67,22 +57,27 @@
           </ul>
         </div>
     </nav>
-    <div class="container" >
+    <div class="container" style="width: 70%;padding: 0px">
       <h1>Taller de Dibujo y Pintura</h1>
       <h4>clases</h4>
-      <div class="container" style="background-color: black;position: absolute; width: 80%">
-        <div class="texto">
+    </div>
+      <div class="container" style="position:relative;background-color: black;width: 70%">
+        <div class="texto" style="padding-top: 20px;">
           <label style="color: white;display:block">
               Horario clases por la mañana y tarde/noche. <br>
               Adultos y niños <br>
               Clases grupales
           </label>
-          <label style="color: white;display: block;width: 40%"><b>En un clima que propicie la investigación, la charla y el intercambio fluído, experimentación, el Taller de dibujo y pintura, que se dicta hace mas de 8 años, es un espacio el cual cada alumno indaga en el desarrollo de su proyecto personal.</b></label> 
+        </div>
+        <div class="texto">
+          <label style="padding-top: 20px;color: white;display: block;width: 30%"><b>En un clima que propicie la investigación, la charla y el intercambio fluído, experimentación, el Taller de dibujo y pintura, que se dicta hace mas de 8 años, es un espacio el cual cada alumno indaga en el desarrollo de su proyecto personal.</b></label> 
+        </div>
+        <div class="texto" style="padding-top: 20px;padding-bottom: 20px;">
           <label style="display: block;color: white;">Contacto
           mariasarandon@hotmail.com
-  ​        </label> 
-        </div>        
-        <section class="fade slider" style="float: right;  margin: 0px auto;">
+  ​        </label>
+        </div>
+        <section class="variable slider sliderTYC">
           <div><img src="Imagenes/TYC/1.png"></div>
           <div><img src="Imagenes/TYC/2.png"></div>
           <div><img src="Imagenes/TYC/3.png"></div>
@@ -93,7 +88,6 @@
           <div><img src="Imagenes/TYC/8.png"></div>
         </section>
       </div>
-    </div>
   </body>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="slick-master/slick/slick.js" type="text/javascript" charset="utf-8"></script>

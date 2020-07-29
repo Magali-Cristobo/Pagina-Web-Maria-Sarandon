@@ -490,3 +490,14 @@ html, body {
     height: auto;
   }
 }
+.sliderTYC{
+  width: 35%;
+  position: absolute;
+  top: 36%;
+  left: 75%;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+.texto{
+  margin-left: 10px;
+}
