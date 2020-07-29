@@ -17,6 +17,47 @@
         <link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css">
         <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css">
         <link rel="stylesheet" type="text/css" href="estilo.css">
+        <style type="text/css">
+          @media (max-width: 662px){
+            .slider img {
+              height: 300px;
+              width: auto;
+            }
+            .slick-slide {
+              margin: 0px auto;
+              height:300px;
+            }
+          }
+           @media (max-width: 545px){
+            .sliderTYC {
+              position: absolute;
+              top: 10px;
+              left: 0px;
+              margin-top: 0px;
+              margin: 0 auto;
+            }
+            .slick-slide {
+              height:300px;
+            }
+            .slick-slide img{
+              margin: 0 auto;
+
+            }
+            .texto label{
+              width: 100%;
+            }
+            .texto{
+              text-align: justify;
+              margin: 0 auto;
+              width: 92%;
+            }
+            .textoACambiar{
+              padding-top:310px ;
+            }
+
+            }
+          
+        </style>
     </head>
     <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light navBar" style="position:relative;">
@@ -59,25 +100,10 @@
     </nav>
     <div class="container" style="width: 70%;padding: 0px">
       <h1>Taller de Dibujo y Pintura</h1>
-      <h4>clases</h4>
+      <h4>Clases</h4>
     </div>
-      <div class="container" style="position:relative;background-color: black;width: 70%">
-        <div class="texto" style="padding-top: 20px;">
-          <label style="color: white;display:block">
-              Horario clases por la mañana y tarde/noche. <br>
-              Adultos y niños <br>
-              Clases grupales
-          </label>
-        </div>
-        <div class="texto">
-          <label style="padding-top: 20px;color: white;display: block;width: 30%"><b>En un clima que propicie la investigación, la charla y el intercambio fluído, experimentación, el Taller de dibujo y pintura, que se dicta hace mas de 8 años, es un espacio el cual cada alumno indaga en el desarrollo de su proyecto personal.</b></label> 
-        </div>
-        <div class="texto" style="padding-top: 20px;padding-bottom: 20px;">
-          <label style="display: block;color: white;">Contacto
-          mariasarandon@hotmail.com
-  ​        </label>
-        </div>
-        <section class="variable slider sliderTYC">
+      <div class="contenedorTYC">
+        <section class="fade slider sliderTYC">
           <div><img src="Imagenes/TYC/1.png"></div>
           <div><img src="Imagenes/TYC/2.png"></div>
           <div><img src="Imagenes/TYC/3.png"></div>
@@ -87,6 +113,21 @@
           <div><img src="Imagenes/TYC/7.png"></div>
           <div><img src="Imagenes/TYC/8.png"></div>
         </section>
+        <div class="texto textoACambiar">
+          <label style="color: white;display:block;padding-top: 20px;">
+              Horario clases por la mañana y tarde/noche. <br>
+              Adultos y niños <br>
+              Clases grupales
+          </label>
+        </div>
+        <div class="texto">
+          <label style="padding-top: 20px;color: white;display: block;"><b>En un clima que propicie la investigación, la charla y el intercambio fluído, experimentación, el Taller de dibujo y pintura, que se dicta hace mas de 8 años, es un espacio el cual cada alumno indaga en el desarrollo de su proyecto personal.</b></label> 
+        </div>
+        <div class="texto" style="padding-top: 20px;padding-bottom: 20px;">
+          <label style="display: block;color: white;">Contacto:
+          mariasarandon@hotmail.com
+  ​        </label>
+        </div>
       </div>
   </body>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
@@ -96,14 +137,16 @@
           window.location = $(this).attr('href');
           });
       $(document).on('ready', function() {
-      $(".variable").slick({
+      $(".fade").slick({
         dots: false,
         infinite: true,
-        variableWidth: true,
-        adaptiveHeight: true,
+        // variableWidth: true,
+        // adaptiveHeight: true,
         autoplay: true,
         slidesToShow: 1,
-        nextArrow: "<button type='button' class='slick-prev'></button>",
+        fade: true,
+        arrows: false,
+        speed:500,
       });
       $(".workInProgress").css("display","block");
       });

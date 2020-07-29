@@ -440,6 +440,13 @@ html, body {
 .slick-slide img {
   height:300px;
 }
+.contenedorTYC{
+  position:relative;
+  background-color: black;
+  width: 70%;
+  margin: 0 auto;
+}
+
 @media (max-width: 662px){
    .slider {
     width: 80%;
@@ -491,13 +498,38 @@ html, body {
   }
 }
 .sliderTYC{
-  width: 35%;
+  width: 70%;
   position: absolute;
-  top: 36%;
+  top: 37%;
   left: 75%;
   margin-top: -100px;
   margin-left: -100px;
 }
 .texto{
   margin-left: 10px;
+  width: 30%;
+
+}
+.fade:not(.show) {
+    opacity: 100;
+}
+@media (max-width: 1380px){
+ .sliderTYC{
+  margin-left: -126px;
+  } 
+}
+@media (max-width: 1200px){
+.sliderTYC{
+  margin-left: -150px;
+  }
+}
+@media (max-width: 1118px){
+.sliderTYC{
+  margin-left: -180px;
+  }
+}
+@media (max-width: 890px){
+  .contenedorTYC{
+    width: 95%
+  }
 }
