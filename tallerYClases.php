@@ -27,9 +27,13 @@
               margin: 0px auto;
               height:300px;
             }
+            .texto{
+              width: 30%;
+            }
           }
-           @media (max-width: 545px){
+           @media (max-width: 660px){
             .sliderTYC {
+              width: 100%;
               position: absolute;
               top: 10px;
               left: 0px;
@@ -52,9 +56,19 @@
               width: 92%;
             }
             .textoACambiar{
-              padding-top:310px ;
+              padding-top:320px;
             }
-
+            h1{
+              font-size: 30px;
+            }
+            h4{
+              font-size: 18px
+            }
+          }
+            @media(min-width: 1800px){
+              .texto{
+                padding: 40px;
+              }
             }
           
         </style>
@@ -114,16 +128,16 @@
           <div><img src="Imagenes/TYC/8.png"></div>
         </section>
         <div class="texto textoACambiar">
-          <label style="color: white;display:block;padding-top: 20px;">
+          <label style="color: white;display:block;">
               Horario clases por la mañana y tarde/noche. <br>
               Adultos y niños <br>
               Clases grupales
           </label>
         </div>
         <div class="texto">
-          <label style="padding-top: 20px;color: white;display: block;"><b>En un clima que propicie la investigación, la charla y el intercambio fluído, experimentación, el Taller de dibujo y pintura, que se dicta hace mas de 8 años, es un espacio el cual cada alumno indaga en el desarrollo de su proyecto personal.</b></label> 
+          <label style="color: white;display: block;"><b>En un clima que propicie la investigación, la charla y el intercambio fluído, experimentación, el Taller de dibujo y pintura, que se dicta hace mas de 8 años, es un espacio el cual cada alumno indaga en el desarrollo de su proyecto personal.</b></label> 
         </div>
-        <div class="texto" style="padding-top: 20px;padding-bottom: 20px;">
+        <div class="texto" style="">
           <label style="display: block;color: white;">Contacto:
           mariasarandon@hotmail.com
   ​        </label>

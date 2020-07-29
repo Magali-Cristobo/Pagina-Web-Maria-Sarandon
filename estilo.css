@@ -507,7 +507,8 @@ html, body {
 }
 .texto{
   margin-left: 10px;
-  width: 30%;
+  width: 40%;
+  padding: 20px;
 
 }
 .fade:not(.show) {
