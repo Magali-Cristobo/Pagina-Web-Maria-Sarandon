@@ -58,6 +58,7 @@
             </br> <i>María Sarandon</i></p>
         </div>
         <div class="frase2">
+            <a>Telefono: mariasarandon</a>
             <a class="auto-generated-link" data-auto-recognition="true" data-content="mariasarandon@hotmail.com" 
             href="mailto:mariasarandon@hotmail.com" data-type="mail"><b>mariasarandon@hotmail.com</b></a>
         </div>

@@ -51,7 +51,7 @@
               width: 100%;
             }
             .texto{
-              text-align: justify;
+              text-align:justify;
               margin: 0 auto;
               width: 92%;
             }
