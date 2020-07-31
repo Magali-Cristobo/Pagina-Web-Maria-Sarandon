@@ -48,7 +48,7 @@
                     <a class="nav-link" href="tallerYClases.php">Taller / clases</a>
                 </li>
                 <li class="nav-item item">
-                  <a class="nav-link" href="#">Contacto</a>
+                  <a class="nav-link" href="index.php#frase2">Contacto</a>
               </li>
             </ul>
           </div>
@@ -57,7 +57,7 @@
             <p>Mi obra pictórica, es un homenaje contemporáneo al grabado botánico antiguo, que le suma tamaño, y se adapta al soporte de la tela con colores vivos y planos, jerarquizando aquellos dibujos minuciosos y de estudio.
             </br> <i>María Sarandon</i></p>
         </div>
-        <div class="frase2">
+        <div id="frase2" class="frase2">
             <a>Telefono: mariasarandon</a>
             <a class="auto-generated-link" data-auto-recognition="true" data-content="mariasarandon@hotmail.com" 
             href="mailto:mariasarandon@hotmail.com" data-type="mail"><b>mariasarandon@hotmail.com</b></a>

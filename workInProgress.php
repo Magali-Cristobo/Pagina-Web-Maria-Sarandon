@@ -57,7 +57,7 @@
                   <a class="nav-link" href="tallerYClases.php">Taller / clases</a>
               </li>
               <li class="nav-item item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="index.php#frase2">Contacto</a>
             </li>
           </ul>
         </div>

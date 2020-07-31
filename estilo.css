@@ -118,8 +118,22 @@
   background-color: white;
   padding-bottom: 38px;
 }
-
-@media(max-width:577px){
+@media(max-width: 550px){
+  .frase p{
+    font-size: 18px;
+    padding-top: 55px;
+    padding-left: 43px;
+    padding-right: 43px;
+    padding-bottom: 55px;
+  }
+  .frase2 a{
+    font-size: 18px;
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+@media(max-width:664px) and (min-width:551px){
   .frase p{
     font-size: 18px;
     padding-top: 55px;
@@ -134,8 +148,10 @@
     padding-top: 20px;
     background-color: white;
     padding-bottom: 20px;
+  }
 }
-}
+  
+
 .space{
   height: 300px;
   width: 4%
