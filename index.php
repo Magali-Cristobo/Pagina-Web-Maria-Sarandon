@@ -18,12 +18,14 @@
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand mx-auto tituloNav titulo2" style="display: block;" href="index.php">Maria Sarandon</a>
+        <a class="navbar-brand tituloNav mx-auto titulo2" href="index.php" id="nombreMaria">Maria Sarandon</a>
+        <a class="navbar-brand tituloNav titulo2" id="artistaVisual" >Artista Visual</a>        
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-              <a class="navbar-brand mx-auto tituloNav titulo1" href="#">Maria Sarandon</a>
+            <ul class="navbar-nav mr-auto barra">
+            <a class="navbar-brand tituloNav  titulo1" href="index.php" id="nombreMaria">Maria Sarandon</a>
+              <a class="navbar-brand tituloNav titulo1" id="artistaVisual" >Artista Visual</a>
                 <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pinturas</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Obras</a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <?php 
                             $i=0;
@@ -58,7 +60,7 @@
             </br> <i>María Sarandon</i></p>
         </div>
         <div id="frase2" class="frase2">
-            <a>Telefono: mariasarandon</a>
+            <a>Telefono: </a>
             <a class="auto-generated-link" data-auto-recognition="true" data-content="mariasarandon@hotmail.com" 
             href="mailto:mariasarandon@hotmail.com" data-type="mail"><b>mariasarandon@hotmail.com</b></a>
         </div>

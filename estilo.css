@@ -163,9 +163,9 @@
   z-index: 3;/*para que quede por arriba de la frase*/
   height:20%;
  }
-.navBar ul{
+.barra{
   width:80%;
-  align-items: right;
+  margin: 0 auto;
 }
  .contenedor{
   margin: 0 auto;
@@ -230,8 +230,6 @@
   color: white;
   margin-bottom: 0px;
 }
-
-
 .fila{
   width: 1000px;
   margin: 0 auto;
@@ -361,11 +359,11 @@
     margin: 0 auto;
   }
   .tituloCuadro{
-    font-size: 20px;
+    font-size: 18px;
     margin-top: -1%;
   }
   .descripcion{
-    font-size: 17px;
+    font-size: 15px;
   }
   .contenedorIndividual{
     width: 100%;
@@ -550,4 +548,17 @@ html, body {
   .contenedorTYC{
     width: 95%
   }
+}
+:root {
+  scroll-behavior: smooth;
+}
+#artistaVisual{
+  font-size: 20px;
+  margin-right: 19%;
+  margin-top: 10px;
+  margin-right: auto;
+
+}
+#nombreMaria{
+  /* margin-left: 27%; */
 }
