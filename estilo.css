@@ -560,5 +560,17 @@ html, body {
 
 }
 #nombreMaria{
-  /* margin-left: 27%; */
+  margin-left: auto;
+}
+@media(max-width:420px){
+  #artistaVisual{
+    font-size:16px;
+    margin-top: 5px;
+  }
+  #nombreMaria{
+    font-size: 25px;
+  }
+}
+.nav-link{
+  margin-top: 11px;
 }

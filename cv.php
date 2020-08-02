@@ -27,11 +27,13 @@
       <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand tituloNav titulo2" style="display: block;" href="index.php">Maria Sarandon</a>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mr-auto">
-            <a class="navbar-brand mx-auto tituloNav titulo1" href="index.php">Maria Sarandon</a>
-            <li class="nav-item dropdown">
+      <a class="navbar-brand tituloNav titulo2" href="index.php" id="nombreMaria">Maria Sarandon</a>
+        <a class="navbar-brand tituloNav titulo2" id="artistaVisual" >Artista Visual</a>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto barra">
+          <a class="navbar-brand tituloNav  titulo1" href="index.php" id="nombreMaria">Maria Sarandon</a>
+              <a class="navbar-brand tituloNav titulo1" id="artistaVisual" >Artista Visual</a>
+                <li class="nav-item dropdown item">
                   <a class="nav-link dropdown-toggle menuDesplegable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Obras</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <?php
@@ -128,7 +130,7 @@
               $(".navbar"). addClass("barraExpandida");
             }
           }
-          if($(window).width() < 977){
+          if($(window).width() < 992){
             $(".titulo1").remove();
           }
           else{

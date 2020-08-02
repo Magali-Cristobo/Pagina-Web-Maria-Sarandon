@@ -18,13 +18,13 @@
         <button class="navbar-toggler" id="boton" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand tituloNav mx-auto titulo2" href="index.php" id="nombreMaria">Maria Sarandon</a>
+        <a class="navbar-brand tituloNav titulo2" href="index.php" id="nombreMaria">Maria Sarandon</a>
         <a class="navbar-brand tituloNav titulo2" id="artistaVisual" >Artista Visual</a>        
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto barra">
             <a class="navbar-brand tituloNav  titulo1" href="index.php" id="nombreMaria">Maria Sarandon</a>
               <a class="navbar-brand tituloNav titulo1" id="artistaVisual" >Artista Visual</a>
-                <li class="nav-item dropdown ">
+                <li class="nav-item dropdown item">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Obras</a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <?php 
@@ -74,7 +74,7 @@
               $(".navbar"). addClass("barraExpandida");
             }
           }
-          if ($(window).width() < 770) {
+          if ($(window).width() < 992) {
             $(".pintura").addClass('pinturaCelular');
             $(".titulo1").remove();
           }
