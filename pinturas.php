@@ -182,6 +182,11 @@
           $("img").click(openNav);
           $(".closebtn").click(closeNav);
           $("#boton").click(agrandarBarra);
+          $(function(){
+            $(document).bind("contextmenu",function(e){
+              return false;
+            });
+          });
         </script>
     </body>
 </html>

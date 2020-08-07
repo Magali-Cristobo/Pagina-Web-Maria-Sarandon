@@ -87,6 +87,12 @@
         $('#menu-main > li > .dropdown-toggle').click(function () {
             window.location = $(this).attr('href');
         });
+        // 
+        $(function(){
+          $(document).bind("contextmenu",function(e){
+            return false;
+          });
+        });
         </script>
     
     </body>

@@ -574,15 +574,3 @@ html, body {
 .nav-link{
   margin-top: 11px;
 }
-/* This is to float the social incons to the right */
-.collapse-social-icons {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-}
-
-/* This is to add the same hover-effect as the other menu items */
-.collapse-social-icons a:hover {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
