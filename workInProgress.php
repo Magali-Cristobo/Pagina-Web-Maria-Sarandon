@@ -6,6 +6,7 @@
         <title>Work in Progress</title>
         <link rel="icon" type="" href="Imagenes/iconoPag.png">
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <!-- Bootstrap CSS -->
@@ -61,6 +62,7 @@
               <li class="nav-item item">
                 <a class="nav-link" href="index.php#frase2">Contacto</a>
             </li>
+            <li class="nav-item collapse-social-icons-dropdown"><a class="nav-link" href="https://www.instagram.com/artesarandon/" target="_blank"><i class="fab fa-instagram" style="font-size:24px"></i></a></li>
           </ul>
         </div>
   </nav>

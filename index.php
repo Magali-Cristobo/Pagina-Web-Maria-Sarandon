@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Home | Maria</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link rel="icon" type="" href="Imagenes/iconoPag.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -52,15 +53,16 @@
                 <li class="nav-item item">
                   <a class="nav-link" href="index.php#frase2">Contacto</a>
               </li>
+              <li class="nav-item collapse-social-icons-dropdown"><a class="nav-link" href="https://www.instagram.com/artesarandon/" target="_blank"><i class="fab fa-instagram" style="font-size:24px"></i></a></li>
             </ul>
           </div>
     </nav>
         <div class="frase">
-            <p>Mi obra pictórica, es un homenaje contemporáneo al grabado botánico antiguo, que le suma tamaño, y se adapta al soporte de la tela con colores vivos y planos, jerarquizando aquellos dibujos minuciosos y de estudio.
+            <p id="laFrase">Mi obra pictórica, es un homenaje contemporáneo al grabado botánico antiguo, que le suma tamaño, y se adapta al soporte de la tela con colores vivos y planos, jerarquizando aquellos dibujos minuciosos y de estudio.
             </br> <i>María Sarandon</i></p>
         </div>
         <div id="frase2" class="frase2">
-            <a>Telefono: </a>
+            <a>Telefono: +54 9 11 5615-9321</a>
             <a class="auto-generated-link" data-auto-recognition="true" data-content="mariasarandon@hotmail.com" 
             href="mailto:mariasarandon@hotmail.com" data-type="mail"><b>mariasarandon@hotmail.com</b></a>
         </div>
