@@ -65,15 +65,14 @@
 .body::after {
   box-sizing: content-box; 
 } */
+
 .bodyIndex{
   margin: 0;
   background-image: url("Fondo.jpg");
-  height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: none;
 }
 .frase{
   z-index: 1;
